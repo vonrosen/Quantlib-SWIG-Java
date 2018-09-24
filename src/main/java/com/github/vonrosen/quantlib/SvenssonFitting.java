@@ -35,8 +35,12 @@ public class SvenssonFitting extends FittingMethod {
     super.delete();
   }
 
+  public SvenssonFitting(Array weights) {
+    this(QuantLibJNI.new_SvenssonFitting__SWIG_0(Array.getCPtr(weights), weights), true);
+  }
+
   public SvenssonFitting() {
-    this(QuantLibJNI.new_SvenssonFitting(), true);
+    this(QuantLibJNI.new_SvenssonFitting__SWIG_1(), true);
   }
 
 }

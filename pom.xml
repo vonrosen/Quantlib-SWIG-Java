@@ -4,7 +4,7 @@
 
 	<groupId>com.github.vonrosen</groupId>
 	<artifactId>quantlib</artifactId>
-	<version>1.10</version>
+	<version>1.20</version>
 	<packaging>jar</packaging>
 
 	<name>quantlib-java-swig</name>
@@ -32,6 +32,10 @@
 			<id>ossrh</id>
 			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 		</snapshotRepository>
+		<repository>
+      			<id>ossrh</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+    		</repository>
 	</distributionManagement>
 
 	<properties>

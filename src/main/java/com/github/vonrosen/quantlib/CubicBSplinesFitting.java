@@ -35,12 +35,20 @@ public class CubicBSplinesFitting extends FittingMethod {
     super.delete();
   }
 
+  public CubicBSplinesFitting(DoubleVector knotVector, boolean constrainAtZero, Array weights) {
+    this(QuantLibJNI.new_CubicBSplinesFitting__SWIG_0(DoubleVector.getCPtr(knotVector), knotVector, constrainAtZero, Array.getCPtr(weights), weights), true);
+  }
+
   public CubicBSplinesFitting(DoubleVector knotVector, boolean constrainAtZero) {
-    this(QuantLibJNI.new_CubicBSplinesFitting__SWIG_0(DoubleVector.getCPtr(knotVector), knotVector, constrainAtZero), true);
+    this(QuantLibJNI.new_CubicBSplinesFitting__SWIG_1(DoubleVector.getCPtr(knotVector), knotVector, constrainAtZero), true);
   }
 
   public CubicBSplinesFitting(DoubleVector knotVector) {
-    this(QuantLibJNI.new_CubicBSplinesFitting__SWIG_1(DoubleVector.getCPtr(knotVector), knotVector), true);
+    this(QuantLibJNI.new_CubicBSplinesFitting__SWIG_2(DoubleVector.getCPtr(knotVector), knotVector), true);
+  }
+
+  public double basisFunction(int i, double t) {
+    return QuantLibJNI.CubicBSplinesFitting_basisFunction(swigCPtr, this, i, t);
   }
 
 }

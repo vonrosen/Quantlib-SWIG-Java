@@ -8,7 +8,7 @@
 
 package com.github.vonrosen.quantlib;
 
-public class SwaptionHelper extends CalibrationHelper {
+public class SwaptionHelper extends BlackCalibrationHelper {
   private transient long swigCPtr;
 
   protected SwaptionHelper(long cPtr, boolean cMemoryOwn) {
@@ -35,23 +35,23 @@ public class SwaptionHelper extends CalibrationHelper {
     super.delete();
   }
 
-  public SwaptionHelper(Period maturity, Period length, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _CalibrationHelper.CalibrationErrorType errorType, double strike, double nominal, VolatilityType type, double shift) {
+  public SwaptionHelper(Period maturity, Period length, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _BlackCalibrationHelper.CalibrationErrorType errorType, double strike, double nominal, VolatilityType type, double shift) {
     this(QuantLibJNI.new_SwaptionHelper__SWIG_0(Period.getCPtr(maturity), maturity, Period.getCPtr(length), length, QuoteHandle.getCPtr(volatility), volatility, IborIndex.getCPtr(index), index, Period.getCPtr(fixedLegTenor), fixedLegTenor, DayCounter.getCPtr(fixedLegDayCounter), fixedLegDayCounter, DayCounter.getCPtr(floatingLegDayCounter), floatingLegDayCounter, YieldTermStructureHandle.getCPtr(termStructure), termStructure, errorType.swigValue(), strike, nominal, type.swigValue(), shift), true);
   }
 
-  public SwaptionHelper(Period maturity, Period length, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _CalibrationHelper.CalibrationErrorType errorType, double strike, double nominal, VolatilityType type) {
+  public SwaptionHelper(Period maturity, Period length, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _BlackCalibrationHelper.CalibrationErrorType errorType, double strike, double nominal, VolatilityType type) {
     this(QuantLibJNI.new_SwaptionHelper__SWIG_1(Period.getCPtr(maturity), maturity, Period.getCPtr(length), length, QuoteHandle.getCPtr(volatility), volatility, IborIndex.getCPtr(index), index, Period.getCPtr(fixedLegTenor), fixedLegTenor, DayCounter.getCPtr(fixedLegDayCounter), fixedLegDayCounter, DayCounter.getCPtr(floatingLegDayCounter), floatingLegDayCounter, YieldTermStructureHandle.getCPtr(termStructure), termStructure, errorType.swigValue(), strike, nominal, type.swigValue()), true);
   }
 
-  public SwaptionHelper(Period maturity, Period length, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _CalibrationHelper.CalibrationErrorType errorType, double strike, double nominal) {
+  public SwaptionHelper(Period maturity, Period length, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _BlackCalibrationHelper.CalibrationErrorType errorType, double strike, double nominal) {
     this(QuantLibJNI.new_SwaptionHelper__SWIG_2(Period.getCPtr(maturity), maturity, Period.getCPtr(length), length, QuoteHandle.getCPtr(volatility), volatility, IborIndex.getCPtr(index), index, Period.getCPtr(fixedLegTenor), fixedLegTenor, DayCounter.getCPtr(fixedLegDayCounter), fixedLegDayCounter, DayCounter.getCPtr(floatingLegDayCounter), floatingLegDayCounter, YieldTermStructureHandle.getCPtr(termStructure), termStructure, errorType.swigValue(), strike, nominal), true);
   }
 
-  public SwaptionHelper(Period maturity, Period length, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _CalibrationHelper.CalibrationErrorType errorType, double strike) {
+  public SwaptionHelper(Period maturity, Period length, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _BlackCalibrationHelper.CalibrationErrorType errorType, double strike) {
     this(QuantLibJNI.new_SwaptionHelper__SWIG_3(Period.getCPtr(maturity), maturity, Period.getCPtr(length), length, QuoteHandle.getCPtr(volatility), volatility, IborIndex.getCPtr(index), index, Period.getCPtr(fixedLegTenor), fixedLegTenor, DayCounter.getCPtr(fixedLegDayCounter), fixedLegDayCounter, DayCounter.getCPtr(floatingLegDayCounter), floatingLegDayCounter, YieldTermStructureHandle.getCPtr(termStructure), termStructure, errorType.swigValue(), strike), true);
   }
 
-  public SwaptionHelper(Period maturity, Period length, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _CalibrationHelper.CalibrationErrorType errorType) {
+  public SwaptionHelper(Period maturity, Period length, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _BlackCalibrationHelper.CalibrationErrorType errorType) {
     this(QuantLibJNI.new_SwaptionHelper__SWIG_4(Period.getCPtr(maturity), maturity, Period.getCPtr(length), length, QuoteHandle.getCPtr(volatility), volatility, IborIndex.getCPtr(index), index, Period.getCPtr(fixedLegTenor), fixedLegTenor, DayCounter.getCPtr(fixedLegDayCounter), fixedLegDayCounter, DayCounter.getCPtr(floatingLegDayCounter), floatingLegDayCounter, YieldTermStructureHandle.getCPtr(termStructure), termStructure, errorType.swigValue()), true);
   }
 
@@ -59,23 +59,23 @@ public class SwaptionHelper extends CalibrationHelper {
     this(QuantLibJNI.new_SwaptionHelper__SWIG_5(Period.getCPtr(maturity), maturity, Period.getCPtr(length), length, QuoteHandle.getCPtr(volatility), volatility, IborIndex.getCPtr(index), index, Period.getCPtr(fixedLegTenor), fixedLegTenor, DayCounter.getCPtr(fixedLegDayCounter), fixedLegDayCounter, DayCounter.getCPtr(floatingLegDayCounter), floatingLegDayCounter, YieldTermStructureHandle.getCPtr(termStructure), termStructure), true);
   }
 
-  public SwaptionHelper(Date exerciseDate, Period length, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _CalibrationHelper.CalibrationErrorType errorType, double strike, double nominal, VolatilityType type, double shift) {
+  public SwaptionHelper(Date exerciseDate, Period length, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _BlackCalibrationHelper.CalibrationErrorType errorType, double strike, double nominal, VolatilityType type, double shift) {
     this(QuantLibJNI.new_SwaptionHelper__SWIG_6(Date.getCPtr(exerciseDate), exerciseDate, Period.getCPtr(length), length, QuoteHandle.getCPtr(volatility), volatility, IborIndex.getCPtr(index), index, Period.getCPtr(fixedLegTenor), fixedLegTenor, DayCounter.getCPtr(fixedLegDayCounter), fixedLegDayCounter, DayCounter.getCPtr(floatingLegDayCounter), floatingLegDayCounter, YieldTermStructureHandle.getCPtr(termStructure), termStructure, errorType.swigValue(), strike, nominal, type.swigValue(), shift), true);
   }
 
-  public SwaptionHelper(Date exerciseDate, Period length, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _CalibrationHelper.CalibrationErrorType errorType, double strike, double nominal, VolatilityType type) {
+  public SwaptionHelper(Date exerciseDate, Period length, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _BlackCalibrationHelper.CalibrationErrorType errorType, double strike, double nominal, VolatilityType type) {
     this(QuantLibJNI.new_SwaptionHelper__SWIG_7(Date.getCPtr(exerciseDate), exerciseDate, Period.getCPtr(length), length, QuoteHandle.getCPtr(volatility), volatility, IborIndex.getCPtr(index), index, Period.getCPtr(fixedLegTenor), fixedLegTenor, DayCounter.getCPtr(fixedLegDayCounter), fixedLegDayCounter, DayCounter.getCPtr(floatingLegDayCounter), floatingLegDayCounter, YieldTermStructureHandle.getCPtr(termStructure), termStructure, errorType.swigValue(), strike, nominal, type.swigValue()), true);
   }
 
-  public SwaptionHelper(Date exerciseDate, Period length, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _CalibrationHelper.CalibrationErrorType errorType, double strike, double nominal) {
+  public SwaptionHelper(Date exerciseDate, Period length, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _BlackCalibrationHelper.CalibrationErrorType errorType, double strike, double nominal) {
     this(QuantLibJNI.new_SwaptionHelper__SWIG_8(Date.getCPtr(exerciseDate), exerciseDate, Period.getCPtr(length), length, QuoteHandle.getCPtr(volatility), volatility, IborIndex.getCPtr(index), index, Period.getCPtr(fixedLegTenor), fixedLegTenor, DayCounter.getCPtr(fixedLegDayCounter), fixedLegDayCounter, DayCounter.getCPtr(floatingLegDayCounter), floatingLegDayCounter, YieldTermStructureHandle.getCPtr(termStructure), termStructure, errorType.swigValue(), strike, nominal), true);
   }
 
-  public SwaptionHelper(Date exerciseDate, Period length, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _CalibrationHelper.CalibrationErrorType errorType, double strike) {
+  public SwaptionHelper(Date exerciseDate, Period length, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _BlackCalibrationHelper.CalibrationErrorType errorType, double strike) {
     this(QuantLibJNI.new_SwaptionHelper__SWIG_9(Date.getCPtr(exerciseDate), exerciseDate, Period.getCPtr(length), length, QuoteHandle.getCPtr(volatility), volatility, IborIndex.getCPtr(index), index, Period.getCPtr(fixedLegTenor), fixedLegTenor, DayCounter.getCPtr(fixedLegDayCounter), fixedLegDayCounter, DayCounter.getCPtr(floatingLegDayCounter), floatingLegDayCounter, YieldTermStructureHandle.getCPtr(termStructure), termStructure, errorType.swigValue(), strike), true);
   }
 
-  public SwaptionHelper(Date exerciseDate, Period length, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _CalibrationHelper.CalibrationErrorType errorType) {
+  public SwaptionHelper(Date exerciseDate, Period length, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _BlackCalibrationHelper.CalibrationErrorType errorType) {
     this(QuantLibJNI.new_SwaptionHelper__SWIG_10(Date.getCPtr(exerciseDate), exerciseDate, Period.getCPtr(length), length, QuoteHandle.getCPtr(volatility), volatility, IborIndex.getCPtr(index), index, Period.getCPtr(fixedLegTenor), fixedLegTenor, DayCounter.getCPtr(fixedLegDayCounter), fixedLegDayCounter, DayCounter.getCPtr(floatingLegDayCounter), floatingLegDayCounter, YieldTermStructureHandle.getCPtr(termStructure), termStructure, errorType.swigValue()), true);
   }
 
@@ -83,23 +83,23 @@ public class SwaptionHelper extends CalibrationHelper {
     this(QuantLibJNI.new_SwaptionHelper__SWIG_11(Date.getCPtr(exerciseDate), exerciseDate, Period.getCPtr(length), length, QuoteHandle.getCPtr(volatility), volatility, IborIndex.getCPtr(index), index, Period.getCPtr(fixedLegTenor), fixedLegTenor, DayCounter.getCPtr(fixedLegDayCounter), fixedLegDayCounter, DayCounter.getCPtr(floatingLegDayCounter), floatingLegDayCounter, YieldTermStructureHandle.getCPtr(termStructure), termStructure), true);
   }
 
-  public SwaptionHelper(Date exerciseDate, Date endDate, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _CalibrationHelper.CalibrationErrorType errorType, double strike, double nominal, VolatilityType type, double shift) {
+  public SwaptionHelper(Date exerciseDate, Date endDate, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _BlackCalibrationHelper.CalibrationErrorType errorType, double strike, double nominal, VolatilityType type, double shift) {
     this(QuantLibJNI.new_SwaptionHelper__SWIG_12(Date.getCPtr(exerciseDate), exerciseDate, Date.getCPtr(endDate), endDate, QuoteHandle.getCPtr(volatility), volatility, IborIndex.getCPtr(index), index, Period.getCPtr(fixedLegTenor), fixedLegTenor, DayCounter.getCPtr(fixedLegDayCounter), fixedLegDayCounter, DayCounter.getCPtr(floatingLegDayCounter), floatingLegDayCounter, YieldTermStructureHandle.getCPtr(termStructure), termStructure, errorType.swigValue(), strike, nominal, type.swigValue(), shift), true);
   }
 
-  public SwaptionHelper(Date exerciseDate, Date endDate, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _CalibrationHelper.CalibrationErrorType errorType, double strike, double nominal, VolatilityType type) {
+  public SwaptionHelper(Date exerciseDate, Date endDate, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _BlackCalibrationHelper.CalibrationErrorType errorType, double strike, double nominal, VolatilityType type) {
     this(QuantLibJNI.new_SwaptionHelper__SWIG_13(Date.getCPtr(exerciseDate), exerciseDate, Date.getCPtr(endDate), endDate, QuoteHandle.getCPtr(volatility), volatility, IborIndex.getCPtr(index), index, Period.getCPtr(fixedLegTenor), fixedLegTenor, DayCounter.getCPtr(fixedLegDayCounter), fixedLegDayCounter, DayCounter.getCPtr(floatingLegDayCounter), floatingLegDayCounter, YieldTermStructureHandle.getCPtr(termStructure), termStructure, errorType.swigValue(), strike, nominal, type.swigValue()), true);
   }
 
-  public SwaptionHelper(Date exerciseDate, Date endDate, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _CalibrationHelper.CalibrationErrorType errorType, double strike, double nominal) {
+  public SwaptionHelper(Date exerciseDate, Date endDate, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _BlackCalibrationHelper.CalibrationErrorType errorType, double strike, double nominal) {
     this(QuantLibJNI.new_SwaptionHelper__SWIG_14(Date.getCPtr(exerciseDate), exerciseDate, Date.getCPtr(endDate), endDate, QuoteHandle.getCPtr(volatility), volatility, IborIndex.getCPtr(index), index, Period.getCPtr(fixedLegTenor), fixedLegTenor, DayCounter.getCPtr(fixedLegDayCounter), fixedLegDayCounter, DayCounter.getCPtr(floatingLegDayCounter), floatingLegDayCounter, YieldTermStructureHandle.getCPtr(termStructure), termStructure, errorType.swigValue(), strike, nominal), true);
   }
 
-  public SwaptionHelper(Date exerciseDate, Date endDate, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _CalibrationHelper.CalibrationErrorType errorType, double strike) {
+  public SwaptionHelper(Date exerciseDate, Date endDate, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _BlackCalibrationHelper.CalibrationErrorType errorType, double strike) {
     this(QuantLibJNI.new_SwaptionHelper__SWIG_15(Date.getCPtr(exerciseDate), exerciseDate, Date.getCPtr(endDate), endDate, QuoteHandle.getCPtr(volatility), volatility, IborIndex.getCPtr(index), index, Period.getCPtr(fixedLegTenor), fixedLegTenor, DayCounter.getCPtr(fixedLegDayCounter), fixedLegDayCounter, DayCounter.getCPtr(floatingLegDayCounter), floatingLegDayCounter, YieldTermStructureHandle.getCPtr(termStructure), termStructure, errorType.swigValue(), strike), true);
   }
 
-  public SwaptionHelper(Date exerciseDate, Date endDate, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _CalibrationHelper.CalibrationErrorType errorType) {
+  public SwaptionHelper(Date exerciseDate, Date endDate, QuoteHandle volatility, IborIndex index, Period fixedLegTenor, DayCounter fixedLegDayCounter, DayCounter floatingLegDayCounter, YieldTermStructureHandle termStructure, _BlackCalibrationHelper.CalibrationErrorType errorType) {
     this(QuantLibJNI.new_SwaptionHelper__SWIG_16(Date.getCPtr(exerciseDate), exerciseDate, Date.getCPtr(endDate), endDate, QuoteHandle.getCPtr(volatility), volatility, IborIndex.getCPtr(index), index, Period.getCPtr(fixedLegTenor), fixedLegTenor, DayCounter.getCPtr(fixedLegDayCounter), fixedLegDayCounter, DayCounter.getCPtr(floatingLegDayCounter), floatingLegDayCounter, YieldTermStructureHandle.getCPtr(termStructure), termStructure, errorType.swigValue()), true);
   }
 

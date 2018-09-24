@@ -35,24 +35,32 @@ public class Schedule {
     }
   }
 
-  public Schedule(DateVector arg0, Calendar calendar, BusinessDayConvention rollingConvention) {
-    this(QuantLibJNI.new_Schedule__SWIG_0(DateVector.getCPtr(arg0), arg0, Calendar.getCPtr(calendar), calendar, rollingConvention.swigValue()), true);
+  public Schedule(DateVector arg0, Calendar calendar, BusinessDayConvention convention) {
+    this(QuantLibJNI.new_Schedule__SWIG_0(DateVector.getCPtr(arg0), arg0, Calendar.getCPtr(calendar), calendar, convention.swigValue()), true);
+  }
+
+  public Schedule(DateVector arg0, Calendar calendar) {
+    this(QuantLibJNI.new_Schedule__SWIG_1(DateVector.getCPtr(arg0), arg0, Calendar.getCPtr(calendar), calendar), true);
+  }
+
+  public Schedule(DateVector arg0) {
+    this(QuantLibJNI.new_Schedule__SWIG_2(DateVector.getCPtr(arg0), arg0), true);
   }
 
   public Schedule(Date effectiveDate, Date terminationDate, Period tenor, Calendar calendar, BusinessDayConvention convention, BusinessDayConvention terminationDateConvention, DateGeneration.Rule rule, boolean endOfMonth, Date firstDate, Date nextToLastDate) {
-    this(QuantLibJNI.new_Schedule__SWIG_1(Date.getCPtr(effectiveDate), effectiveDate, Date.getCPtr(terminationDate), terminationDate, Period.getCPtr(tenor), tenor, Calendar.getCPtr(calendar), calendar, convention.swigValue(), terminationDateConvention.swigValue(), rule.swigValue(), endOfMonth, Date.getCPtr(firstDate), firstDate, Date.getCPtr(nextToLastDate), nextToLastDate), true);
+    this(QuantLibJNI.new_Schedule__SWIG_3(Date.getCPtr(effectiveDate), effectiveDate, Date.getCPtr(terminationDate), terminationDate, Period.getCPtr(tenor), tenor, Calendar.getCPtr(calendar), calendar, convention.swigValue(), terminationDateConvention.swigValue(), rule.swigValue(), endOfMonth, Date.getCPtr(firstDate), firstDate, Date.getCPtr(nextToLastDate), nextToLastDate), true);
   }
 
   public Schedule(Date effectiveDate, Date terminationDate, Period tenor, Calendar calendar, BusinessDayConvention convention, BusinessDayConvention terminationDateConvention, DateGeneration.Rule rule, boolean endOfMonth, Date firstDate) {
-    this(QuantLibJNI.new_Schedule__SWIG_2(Date.getCPtr(effectiveDate), effectiveDate, Date.getCPtr(terminationDate), terminationDate, Period.getCPtr(tenor), tenor, Calendar.getCPtr(calendar), calendar, convention.swigValue(), terminationDateConvention.swigValue(), rule.swigValue(), endOfMonth, Date.getCPtr(firstDate), firstDate), true);
+    this(QuantLibJNI.new_Schedule__SWIG_4(Date.getCPtr(effectiveDate), effectiveDate, Date.getCPtr(terminationDate), terminationDate, Period.getCPtr(tenor), tenor, Calendar.getCPtr(calendar), calendar, convention.swigValue(), terminationDateConvention.swigValue(), rule.swigValue(), endOfMonth, Date.getCPtr(firstDate), firstDate), true);
   }
 
   public Schedule(Date effectiveDate, Date terminationDate, Period tenor, Calendar calendar, BusinessDayConvention convention, BusinessDayConvention terminationDateConvention, DateGeneration.Rule rule, boolean endOfMonth) {
-    this(QuantLibJNI.new_Schedule__SWIG_3(Date.getCPtr(effectiveDate), effectiveDate, Date.getCPtr(terminationDate), terminationDate, Period.getCPtr(tenor), tenor, Calendar.getCPtr(calendar), calendar, convention.swigValue(), terminationDateConvention.swigValue(), rule.swigValue(), endOfMonth), true);
+    this(QuantLibJNI.new_Schedule__SWIG_5(Date.getCPtr(effectiveDate), effectiveDate, Date.getCPtr(terminationDate), terminationDate, Period.getCPtr(tenor), tenor, Calendar.getCPtr(calendar), calendar, convention.swigValue(), terminationDateConvention.swigValue(), rule.swigValue(), endOfMonth), true);
   }
 
   public Schedule() {
-    this(QuantLibJNI.new_Schedule__SWIG_4(), true);
+    this(QuantLibJNI.new_Schedule__SWIG_6(), true);
   }
 
   public long size() {

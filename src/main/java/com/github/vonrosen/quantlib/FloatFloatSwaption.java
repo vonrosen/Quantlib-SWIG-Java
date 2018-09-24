@@ -47,4 +47,12 @@ public class FloatFloatSwaption extends Instrument {
     return QuantLibJNI.FloatFloatSwaption_underlyingValue(swigCPtr, this);
   }
 
+  public FloatFloatSwap underlyingSwap() {
+    return new FloatFloatSwap(QuantLibJNI.FloatFloatSwaption_underlyingSwap(swigCPtr, this), true);
+  }
+
+  public DoubleVector probabilities() {
+    return new DoubleVector(QuantLibJNI.FloatFloatSwaption_probabilities(swigCPtr, this), true);
+  }
+
 }

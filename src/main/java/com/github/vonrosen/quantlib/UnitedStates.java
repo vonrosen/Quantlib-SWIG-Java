@@ -48,6 +48,8 @@ public class UnitedStates extends Calendar {
     public final static UnitedStates.Market NYSE = new UnitedStates.Market("NYSE");
     public final static UnitedStates.Market GovernmentBond = new UnitedStates.Market("GovernmentBond");
     public final static UnitedStates.Market NERC = new UnitedStates.Market("NERC");
+    public final static UnitedStates.Market LiborImpact = new UnitedStates.Market("LiborImpact");
+    public final static UnitedStates.Market FederalReserve = new UnitedStates.Market("FederalReserve");
 
     public final int swigValue() {
       return swigValue;
@@ -83,7 +85,7 @@ public class UnitedStates extends Calendar {
       swigNext = this.swigValue+1;
     }
 
-    private static Market[] swigValues = { Settlement, NYSE, GovernmentBond, NERC };
+    private static Market[] swigValues = { Settlement, NYSE, GovernmentBond, NERC, LiborImpact, FederalReserve };
     private static int swigNext = 0;
     private final int swigValue;
     private final String swigName;

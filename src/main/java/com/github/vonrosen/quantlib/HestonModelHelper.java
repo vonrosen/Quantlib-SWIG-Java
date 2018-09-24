@@ -8,7 +8,7 @@
 
 package com.github.vonrosen.quantlib;
 
-public class HestonModelHelper extends CalibrationHelper {
+public class HestonModelHelper extends BlackCalibrationHelper {
   private transient long swigCPtr;
 
   protected HestonModelHelper(long cPtr, boolean cMemoryOwn) {
@@ -35,7 +35,7 @@ public class HestonModelHelper extends CalibrationHelper {
     super.delete();
   }
 
-  public HestonModelHelper(Period maturity, Calendar calendar, double s0, double strikePrice, QuoteHandle volatility, YieldTermStructureHandle riskFreeRate, YieldTermStructureHandle dividendYield, _CalibrationHelper.CalibrationErrorType errorType) {
+  public HestonModelHelper(Period maturity, Calendar calendar, double s0, double strikePrice, QuoteHandle volatility, YieldTermStructureHandle riskFreeRate, YieldTermStructureHandle dividendYield, _BlackCalibrationHelper.CalibrationErrorType errorType) {
     this(QuantLibJNI.new_HestonModelHelper__SWIG_0(Period.getCPtr(maturity), maturity, Calendar.getCPtr(calendar), calendar, s0, strikePrice, QuoteHandle.getCPtr(volatility), volatility, YieldTermStructureHandle.getCPtr(riskFreeRate), riskFreeRate, YieldTermStructureHandle.getCPtr(dividendYield), dividendYield, errorType.swigValue()), true);
   }
 

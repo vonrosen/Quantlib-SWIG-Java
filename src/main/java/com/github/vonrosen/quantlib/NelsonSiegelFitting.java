@@ -35,8 +35,12 @@ public class NelsonSiegelFitting extends FittingMethod {
     super.delete();
   }
 
+  public NelsonSiegelFitting(Array weights) {
+    this(QuantLibJNI.new_NelsonSiegelFitting__SWIG_0(Array.getCPtr(weights), weights), true);
+  }
+
   public NelsonSiegelFitting() {
-    this(QuantLibJNI.new_NelsonSiegelFitting(), true);
+    this(QuantLibJNI.new_NelsonSiegelFitting__SWIG_1(), true);
   }
 
 }

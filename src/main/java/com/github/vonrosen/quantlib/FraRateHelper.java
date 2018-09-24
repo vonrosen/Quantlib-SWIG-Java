@@ -35,20 +35,52 @@ public class FraRateHelper extends RateHelper {
     super.delete();
   }
 
+  public FraRateHelper(QuoteHandle rate, long monthsToStart, long monthsToEnd, long fixingDays, Calendar calendar, BusinessDayConvention convention, boolean endOfMonth, DayCounter dayCounter, Pillar.Choice pillar, Date customPillarDate) {
+    this(QuantLibJNI.new_FraRateHelper__SWIG_0(QuoteHandle.getCPtr(rate), rate, monthsToStart, monthsToEnd, fixingDays, Calendar.getCPtr(calendar), calendar, convention.swigValue(), endOfMonth, DayCounter.getCPtr(dayCounter), dayCounter, pillar.swigValue(), Date.getCPtr(customPillarDate), customPillarDate), true);
+  }
+
+  public FraRateHelper(QuoteHandle rate, long monthsToStart, long monthsToEnd, long fixingDays, Calendar calendar, BusinessDayConvention convention, boolean endOfMonth, DayCounter dayCounter, Pillar.Choice pillar) {
+    this(QuantLibJNI.new_FraRateHelper__SWIG_1(QuoteHandle.getCPtr(rate), rate, monthsToStart, monthsToEnd, fixingDays, Calendar.getCPtr(calendar), calendar, convention.swigValue(), endOfMonth, DayCounter.getCPtr(dayCounter), dayCounter, pillar.swigValue()), true);
+  }
+
   public FraRateHelper(QuoteHandle rate, long monthsToStart, long monthsToEnd, long fixingDays, Calendar calendar, BusinessDayConvention convention, boolean endOfMonth, DayCounter dayCounter) {
-    this(QuantLibJNI.new_FraRateHelper__SWIG_0(QuoteHandle.getCPtr(rate), rate, monthsToStart, monthsToEnd, fixingDays, Calendar.getCPtr(calendar), calendar, convention.swigValue(), endOfMonth, DayCounter.getCPtr(dayCounter), dayCounter), true);
+    this(QuantLibJNI.new_FraRateHelper__SWIG_2(QuoteHandle.getCPtr(rate), rate, monthsToStart, monthsToEnd, fixingDays, Calendar.getCPtr(calendar), calendar, convention.swigValue(), endOfMonth, DayCounter.getCPtr(dayCounter), dayCounter), true);
+  }
+
+  public FraRateHelper(double rate, long monthsToStart, long monthsToEnd, long fixingDays, Calendar calendar, BusinessDayConvention convention, boolean endOfMonth, DayCounter dayCounter, Pillar.Choice pillar, Date customPillarDate) {
+    this(QuantLibJNI.new_FraRateHelper__SWIG_3(rate, monthsToStart, monthsToEnd, fixingDays, Calendar.getCPtr(calendar), calendar, convention.swigValue(), endOfMonth, DayCounter.getCPtr(dayCounter), dayCounter, pillar.swigValue(), Date.getCPtr(customPillarDate), customPillarDate), true);
+  }
+
+  public FraRateHelper(double rate, long monthsToStart, long monthsToEnd, long fixingDays, Calendar calendar, BusinessDayConvention convention, boolean endOfMonth, DayCounter dayCounter, Pillar.Choice pillar) {
+    this(QuantLibJNI.new_FraRateHelper__SWIG_4(rate, monthsToStart, monthsToEnd, fixingDays, Calendar.getCPtr(calendar), calendar, convention.swigValue(), endOfMonth, DayCounter.getCPtr(dayCounter), dayCounter, pillar.swigValue()), true);
   }
 
   public FraRateHelper(double rate, long monthsToStart, long monthsToEnd, long fixingDays, Calendar calendar, BusinessDayConvention convention, boolean endOfMonth, DayCounter dayCounter) {
-    this(QuantLibJNI.new_FraRateHelper__SWIG_1(rate, monthsToStart, monthsToEnd, fixingDays, Calendar.getCPtr(calendar), calendar, convention.swigValue(), endOfMonth, DayCounter.getCPtr(dayCounter), dayCounter), true);
+    this(QuantLibJNI.new_FraRateHelper__SWIG_5(rate, monthsToStart, monthsToEnd, fixingDays, Calendar.getCPtr(calendar), calendar, convention.swigValue(), endOfMonth, DayCounter.getCPtr(dayCounter), dayCounter), true);
+  }
+
+  public FraRateHelper(QuoteHandle rate, long monthsToStart, IborIndex index, Pillar.Choice pillar, Date customPillarDate) {
+    this(QuantLibJNI.new_FraRateHelper__SWIG_6(QuoteHandle.getCPtr(rate), rate, monthsToStart, IborIndex.getCPtr(index), index, pillar.swigValue(), Date.getCPtr(customPillarDate), customPillarDate), true);
+  }
+
+  public FraRateHelper(QuoteHandle rate, long monthsToStart, IborIndex index, Pillar.Choice pillar) {
+    this(QuantLibJNI.new_FraRateHelper__SWIG_7(QuoteHandle.getCPtr(rate), rate, monthsToStart, IborIndex.getCPtr(index), index, pillar.swigValue()), true);
   }
 
   public FraRateHelper(QuoteHandle rate, long monthsToStart, IborIndex index) {
-    this(QuantLibJNI.new_FraRateHelper__SWIG_2(QuoteHandle.getCPtr(rate), rate, monthsToStart, IborIndex.getCPtr(index), index), true);
+    this(QuantLibJNI.new_FraRateHelper__SWIG_8(QuoteHandle.getCPtr(rate), rate, monthsToStart, IborIndex.getCPtr(index), index), true);
+  }
+
+  public FraRateHelper(double rate, long monthsToStart, IborIndex index, Pillar.Choice pillar, Date customPillarDate) {
+    this(QuantLibJNI.new_FraRateHelper__SWIG_9(rate, monthsToStart, IborIndex.getCPtr(index), index, pillar.swigValue(), Date.getCPtr(customPillarDate), customPillarDate), true);
+  }
+
+  public FraRateHelper(double rate, long monthsToStart, IborIndex index, Pillar.Choice pillar) {
+    this(QuantLibJNI.new_FraRateHelper__SWIG_10(rate, monthsToStart, IborIndex.getCPtr(index), index, pillar.swigValue()), true);
   }
 
   public FraRateHelper(double rate, long monthsToStart, IborIndex index) {
-    this(QuantLibJNI.new_FraRateHelper__SWIG_3(rate, monthsToStart, IborIndex.getCPtr(index), index), true);
+    this(QuantLibJNI.new_FraRateHelper__SWIG_11(rate, monthsToStart, IborIndex.getCPtr(index), index), true);
   }
 
 }

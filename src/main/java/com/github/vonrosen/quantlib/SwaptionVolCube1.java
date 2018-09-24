@@ -51,4 +51,20 @@ public class SwaptionVolCube1 extends SwaptionVolatilityStructure {
     this(QuantLibJNI.new_SwaptionVolCube1__SWIG_3(SwaptionVolatilityStructureHandle.getCPtr(atmVolStructure), atmVolStructure, PeriodVector.getCPtr(optionTenors), optionTenors, PeriodVector.getCPtr(swapTenors), swapTenors, DoubleVector.getCPtr(strikeSpreads), strikeSpreads, QuoteHandleVectorVector.getCPtr(volSpreads), volSpreads, SwapIndex.getCPtr(swapIndexBase), swapIndexBase, SwapIndex.getCPtr(shortSwapIndexBase), shortSwapIndexBase, vegaWeightedSmileFit, QuoteHandleVectorVector.getCPtr(parametersGuess), parametersGuess, BoolVector.getCPtr(isParameterFixed), isParameterFixed, isAtmCalibrated), true);
   }
 
+  public Matrix sparseSabrParameters() {
+    return new Matrix(QuantLibJNI.SwaptionVolCube1_sparseSabrParameters(swigCPtr, this), true);
+  }
+
+  public Matrix denseSabrParameters() {
+    return new Matrix(QuantLibJNI.SwaptionVolCube1_denseSabrParameters(swigCPtr, this), true);
+  }
+
+  public Matrix marketVolCube() {
+    return new Matrix(QuantLibJNI.SwaptionVolCube1_marketVolCube(swigCPtr, this), true);
+  }
+
+  public Matrix volCubeAtmCalibrated() {
+    return new Matrix(QuantLibJNI.SwaptionVolCube1_volCubeAtmCalibrated(swigCPtr, this), true);
+  }
+
 }

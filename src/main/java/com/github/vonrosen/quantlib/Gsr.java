@@ -43,40 +43,40 @@ public class Gsr extends Gaussian1dModel {
     this(QuantLibJNI.new_Gsr__SWIG_1(YieldTermStructureHandle.getCPtr(termStructure), termStructure, DateVector.getCPtr(volstepdates), volstepdates, QuoteHandleVector.getCPtr(volatilities), volatilities, QuoteHandleVector.getCPtr(reversions), reversions), true);
   }
 
-  public void calibrateVolatilitiesIterative(CalibrationHelperVector helpers, OptimizationMethod method, EndCriteria endCriteria, Constraint constraint, DoubleVector weights) {
-    QuantLibJNI.Gsr_calibrateVolatilitiesIterative__SWIG_0(swigCPtr, this, CalibrationHelperVector.getCPtr(helpers), helpers, OptimizationMethod.getCPtr(method), method, EndCriteria.getCPtr(endCriteria), endCriteria, Constraint.getCPtr(constraint), constraint, DoubleVector.getCPtr(weights), weights);
+  public void calibrateVolatilitiesIterative(CalibrationHelperVector hs, OptimizationMethod method, EndCriteria endCriteria, Constraint constraint, DoubleVector weights) {
+    QuantLibJNI.Gsr_calibrateVolatilitiesIterative__SWIG_0(swigCPtr, this, CalibrationHelperVector.getCPtr(hs), hs, OptimizationMethod.getCPtr(method), method, EndCriteria.getCPtr(endCriteria), endCriteria, Constraint.getCPtr(constraint), constraint, DoubleVector.getCPtr(weights), weights);
   }
 
-  public void calibrateVolatilitiesIterative(CalibrationHelperVector helpers, OptimizationMethod method, EndCriteria endCriteria, Constraint constraint) {
-    QuantLibJNI.Gsr_calibrateVolatilitiesIterative__SWIG_1(swigCPtr, this, CalibrationHelperVector.getCPtr(helpers), helpers, OptimizationMethod.getCPtr(method), method, EndCriteria.getCPtr(endCriteria), endCriteria, Constraint.getCPtr(constraint), constraint);
+  public void calibrateVolatilitiesIterative(CalibrationHelperVector hs, OptimizationMethod method, EndCriteria endCriteria, Constraint constraint) {
+    QuantLibJNI.Gsr_calibrateVolatilitiesIterative__SWIG_1(swigCPtr, this, CalibrationHelperVector.getCPtr(hs), hs, OptimizationMethod.getCPtr(method), method, EndCriteria.getCPtr(endCriteria), endCriteria, Constraint.getCPtr(constraint), constraint);
   }
 
-  public void calibrateVolatilitiesIterative(CalibrationHelperVector helpers, OptimizationMethod method, EndCriteria endCriteria) {
-    QuantLibJNI.Gsr_calibrateVolatilitiesIterative__SWIG_2(swigCPtr, this, CalibrationHelperVector.getCPtr(helpers), helpers, OptimizationMethod.getCPtr(method), method, EndCriteria.getCPtr(endCriteria), endCriteria);
+  public void calibrateVolatilitiesIterative(CalibrationHelperVector hs, OptimizationMethod method, EndCriteria endCriteria) {
+    QuantLibJNI.Gsr_calibrateVolatilitiesIterative__SWIG_2(swigCPtr, this, CalibrationHelperVector.getCPtr(hs), hs, OptimizationMethod.getCPtr(method), method, EndCriteria.getCPtr(endCriteria), endCriteria);
   }
 
-  public void calibrate(CalibrationHelperVector helpers, OptimizationMethod method, EndCriteria endCriteria, Constraint constraint, DoubleVector weights, BoolVector fixParameters) {
-    QuantLibJNI.Gsr_calibrate__SWIG_0(swigCPtr, this, CalibrationHelperVector.getCPtr(helpers), helpers, OptimizationMethod.getCPtr(method), method, EndCriteria.getCPtr(endCriteria), endCriteria, Constraint.getCPtr(constraint), constraint, DoubleVector.getCPtr(weights), weights, BoolVector.getCPtr(fixParameters), fixParameters);
+  public void calibrate(CalibrationHelperVector hs, OptimizationMethod method, EndCriteria endCriteria, Constraint constraint, DoubleVector weights, BoolVector fixParameters) {
+    QuantLibJNI.Gsr_calibrate__SWIG_0(swigCPtr, this, CalibrationHelperVector.getCPtr(hs), hs, OptimizationMethod.getCPtr(method), method, EndCriteria.getCPtr(endCriteria), endCriteria, Constraint.getCPtr(constraint), constraint, DoubleVector.getCPtr(weights), weights, BoolVector.getCPtr(fixParameters), fixParameters);
   }
 
-  public void calibrate(CalibrationHelperVector helpers, OptimizationMethod method, EndCriteria endCriteria, Constraint constraint, DoubleVector weights) {
-    QuantLibJNI.Gsr_calibrate__SWIG_1(swigCPtr, this, CalibrationHelperVector.getCPtr(helpers), helpers, OptimizationMethod.getCPtr(method), method, EndCriteria.getCPtr(endCriteria), endCriteria, Constraint.getCPtr(constraint), constraint, DoubleVector.getCPtr(weights), weights);
+  public void calibrate(CalibrationHelperVector hs, OptimizationMethod method, EndCriteria endCriteria, Constraint constraint, DoubleVector weights) {
+    QuantLibJNI.Gsr_calibrate__SWIG_1(swigCPtr, this, CalibrationHelperVector.getCPtr(hs), hs, OptimizationMethod.getCPtr(method), method, EndCriteria.getCPtr(endCriteria), endCriteria, Constraint.getCPtr(constraint), constraint, DoubleVector.getCPtr(weights), weights);
   }
 
-  public void calibrate(CalibrationHelperVector helpers, OptimizationMethod method, EndCriteria endCriteria, Constraint constraint) {
-    QuantLibJNI.Gsr_calibrate__SWIG_2(swigCPtr, this, CalibrationHelperVector.getCPtr(helpers), helpers, OptimizationMethod.getCPtr(method), method, EndCriteria.getCPtr(endCriteria), endCriteria, Constraint.getCPtr(constraint), constraint);
+  public void calibrate(CalibrationHelperVector hs, OptimizationMethod method, EndCriteria endCriteria, Constraint constraint) {
+    QuantLibJNI.Gsr_calibrate__SWIG_2(swigCPtr, this, CalibrationHelperVector.getCPtr(hs), hs, OptimizationMethod.getCPtr(method), method, EndCriteria.getCPtr(endCriteria), endCriteria, Constraint.getCPtr(constraint), constraint);
   }
 
-  public void calibrate(CalibrationHelperVector helpers, OptimizationMethod method, EndCriteria endCriteria) {
-    QuantLibJNI.Gsr_calibrate__SWIG_3(swigCPtr, this, CalibrationHelperVector.getCPtr(helpers), helpers, OptimizationMethod.getCPtr(method), method, EndCriteria.getCPtr(endCriteria), endCriteria);
+  public void calibrate(CalibrationHelperVector hs, OptimizationMethod method, EndCriteria endCriteria) {
+    QuantLibJNI.Gsr_calibrate__SWIG_3(swigCPtr, this, CalibrationHelperVector.getCPtr(hs), hs, OptimizationMethod.getCPtr(method), method, EndCriteria.getCPtr(endCriteria), endCriteria);
   }
 
   public Array params() {
     return new Array(QuantLibJNI.Gsr_params(swigCPtr, this), true);
   }
 
-  public double value(Array params, CalibrationHelperVector helpers) {
-    return QuantLibJNI.Gsr_value(swigCPtr, this, Array.getCPtr(params), params, CalibrationHelperVector.getCPtr(helpers), helpers);
+  public double value(Array params, CalibrationHelperVector hs) {
+    return QuantLibJNI.Gsr_value(swigCPtr, this, Array.getCPtr(params), params, CalibrationHelperVector.getCPtr(hs), hs);
   }
 
   public EndCriteria.Type endCriteria() {

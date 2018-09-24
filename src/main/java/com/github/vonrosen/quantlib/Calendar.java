@@ -107,6 +107,14 @@ public class Calendar {
     return QuantLibJNI.Calendar_businessDaysBetween__SWIG_2(swigCPtr, this, Date.getCPtr(from), from, Date.getCPtr(to), to);
   }
 
+  public static DateVector holidayList(Calendar calendar, Date from, Date to, boolean includeWeekEnds) {
+    return new DateVector(QuantLibJNI.Calendar_holidayList__SWIG_0(Calendar.getCPtr(calendar), calendar, Date.getCPtr(from), from, Date.getCPtr(to), to, includeWeekEnds), true);
+  }
+
+  public static DateVector holidayList(Calendar calendar, Date from, Date to) {
+    return new DateVector(QuantLibJNI.Calendar_holidayList__SWIG_1(Calendar.getCPtr(calendar), calendar, Date.getCPtr(from), from, Date.getCPtr(to), to), true);
+  }
+
   public String name() {
     return QuantLibJNI.Calendar_name(swigCPtr, this);
   }

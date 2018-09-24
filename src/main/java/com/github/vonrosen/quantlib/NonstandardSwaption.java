@@ -47,4 +47,12 @@ public class NonstandardSwaption extends Instrument {
     return new CalibrationHelperVector(QuantLibJNI.NonstandardSwaption_calibrationBasket(swigCPtr, this, Index.getCPtr(standardSwapBase), standardSwapBase, SwaptionVolatilityStructure.getCPtr(swaptionVolatility), swaptionVolatility, typeStr), true);
   }
 
+  public NonstandardSwap underlyingSwap() {
+    return new NonstandardSwap(QuantLibJNI.NonstandardSwaption_underlyingSwap(swigCPtr, this), true);
+  }
+
+  public DoubleVector probabilities() {
+    return new DoubleVector(QuantLibJNI.NonstandardSwaption_probabilities(swigCPtr, this), true);
+  }
+
 }

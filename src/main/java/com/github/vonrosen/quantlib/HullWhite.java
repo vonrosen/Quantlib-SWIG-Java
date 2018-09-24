@@ -51,4 +51,12 @@ public class HullWhite extends ShortRateModel {
     return QuantLibJNI.HullWhite_discount(swigCPtr, this, t);
   }
 
+  public double discountBond(double now, double maturity, double rate) {
+    return QuantLibJNI.HullWhite_discountBond(swigCPtr, this, now, maturity, rate);
+  }
+
+  public static double convexityBias(double futurePrice, double t, double T, double sigma, double a) {
+    return QuantLibJNI.HullWhite_convexityBias(futurePrice, t, T, sigma, a);
+  }
+
 }

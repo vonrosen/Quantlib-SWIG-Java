@@ -35,28 +35,35 @@ public class Gaussian1dSwaptionEngine extends PricingEngine {
     super.delete();
   }
 
+  public Gaussian1dSwaptionEngine(Gaussian1dModel model, int integrationPoints, double stddevs, boolean extrapolatePayoff, boolean flatPayoffExtrapolation, YieldTermStructureHandle discountCurve, _Gaussian1dSwaptionEngine.Probabilities probabilities) {
+    this(QuantLibJNI.new_Gaussian1dSwaptionEngine__SWIG_0(Gaussian1dModel.getCPtr(model), model, integrationPoints, stddevs, extrapolatePayoff, flatPayoffExtrapolation, YieldTermStructureHandle.getCPtr(discountCurve), discountCurve, probabilities.swigValue()), true);
+  }
+
   public Gaussian1dSwaptionEngine(Gaussian1dModel model, int integrationPoints, double stddevs, boolean extrapolatePayoff, boolean flatPayoffExtrapolation, YieldTermStructureHandle discountCurve) {
-    this(QuantLibJNI.new_Gaussian1dSwaptionEngine__SWIG_0(Gaussian1dModel.getCPtr(model), model, integrationPoints, stddevs, extrapolatePayoff, flatPayoffExtrapolation, YieldTermStructureHandle.getCPtr(discountCurve), discountCurve), true);
+    this(QuantLibJNI.new_Gaussian1dSwaptionEngine__SWIG_1(Gaussian1dModel.getCPtr(model), model, integrationPoints, stddevs, extrapolatePayoff, flatPayoffExtrapolation, YieldTermStructureHandle.getCPtr(discountCurve), discountCurve), true);
   }
 
   public Gaussian1dSwaptionEngine(Gaussian1dModel model, int integrationPoints, double stddevs, boolean extrapolatePayoff, boolean flatPayoffExtrapolation) {
-    this(QuantLibJNI.new_Gaussian1dSwaptionEngine__SWIG_1(Gaussian1dModel.getCPtr(model), model, integrationPoints, stddevs, extrapolatePayoff, flatPayoffExtrapolation), true);
+    this(QuantLibJNI.new_Gaussian1dSwaptionEngine__SWIG_2(Gaussian1dModel.getCPtr(model), model, integrationPoints, stddevs, extrapolatePayoff, flatPayoffExtrapolation), true);
   }
 
   public Gaussian1dSwaptionEngine(Gaussian1dModel model, int integrationPoints, double stddevs, boolean extrapolatePayoff) {
-    this(QuantLibJNI.new_Gaussian1dSwaptionEngine__SWIG_2(Gaussian1dModel.getCPtr(model), model, integrationPoints, stddevs, extrapolatePayoff), true);
+    this(QuantLibJNI.new_Gaussian1dSwaptionEngine__SWIG_3(Gaussian1dModel.getCPtr(model), model, integrationPoints, stddevs, extrapolatePayoff), true);
   }
 
   public Gaussian1dSwaptionEngine(Gaussian1dModel model, int integrationPoints, double stddevs) {
-    this(QuantLibJNI.new_Gaussian1dSwaptionEngine__SWIG_3(Gaussian1dModel.getCPtr(model), model, integrationPoints, stddevs), true);
+    this(QuantLibJNI.new_Gaussian1dSwaptionEngine__SWIG_4(Gaussian1dModel.getCPtr(model), model, integrationPoints, stddevs), true);
   }
 
   public Gaussian1dSwaptionEngine(Gaussian1dModel model, int integrationPoints) {
-    this(QuantLibJNI.new_Gaussian1dSwaptionEngine__SWIG_4(Gaussian1dModel.getCPtr(model), model, integrationPoints), true);
+    this(QuantLibJNI.new_Gaussian1dSwaptionEngine__SWIG_5(Gaussian1dModel.getCPtr(model), model, integrationPoints), true);
   }
 
   public Gaussian1dSwaptionEngine(Gaussian1dModel model) {
-    this(QuantLibJNI.new_Gaussian1dSwaptionEngine__SWIG_5(Gaussian1dModel.getCPtr(model), model), true);
+    this(QuantLibJNI.new_Gaussian1dSwaptionEngine__SWIG_6(Gaussian1dModel.getCPtr(model), model), true);
   }
 
+  public final static _Gaussian1dSwaptionEngine.Probabilities None = _Gaussian1dSwaptionEngine.Probabilities.swigToEnum(QuantLibJNI.Gaussian1dSwaptionEngine_None_get());
+  public final static _Gaussian1dSwaptionEngine.Probabilities Naive = _Gaussian1dSwaptionEngine.Probabilities.swigToEnum(QuantLibJNI.Gaussian1dSwaptionEngine_Naive_get());
+  public final static _Gaussian1dSwaptionEngine.Probabilities Digital = _Gaussian1dSwaptionEngine.Probabilities.swigToEnum(QuantLibJNI.Gaussian1dSwaptionEngine_Digital_get());
 }

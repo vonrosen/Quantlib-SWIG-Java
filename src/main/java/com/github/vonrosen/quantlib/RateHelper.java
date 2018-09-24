@@ -56,4 +56,28 @@ public class RateHelper {
     return new Date(QuantLibJNI.RateHelper_latestDate(swigCPtr, this), true);
   }
 
+  public Date earliestDate() {
+    return new Date(QuantLibJNI.RateHelper_earliestDate(swigCPtr, this), true);
+  }
+
+  public Date maturityDate() {
+    return new Date(QuantLibJNI.RateHelper_maturityDate(swigCPtr, this), true);
+  }
+
+  public Date latestRelevantDate() {
+    return new Date(QuantLibJNI.RateHelper_latestRelevantDate(swigCPtr, this), true);
+  }
+
+  public Date pillarDate() {
+    return new Date(QuantLibJNI.RateHelper_pillarDate(swigCPtr, this), true);
+  }
+
+  public double impliedQuote() {
+    return QuantLibJNI.RateHelper_impliedQuote(swigCPtr, this);
+  }
+
+  public double quoteError() {
+    return QuantLibJNI.RateHelper_quoteError(swigCPtr, this);
+  }
+
 }

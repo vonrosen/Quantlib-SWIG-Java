@@ -35,20 +35,52 @@ public class ConstantOptionletVolatility extends OptionletVolatilityStructure {
     super.delete();
   }
 
+  public ConstantOptionletVolatility(Date referenceDate, Calendar cal, BusinessDayConvention bdc, double volatility, DayCounter dayCounter, VolatilityType type, double shift) {
+    this(QuantLibJNI.new_ConstantOptionletVolatility__SWIG_0(Date.getCPtr(referenceDate), referenceDate, Calendar.getCPtr(cal), cal, bdc.swigValue(), volatility, DayCounter.getCPtr(dayCounter), dayCounter, type.swigValue(), shift), true);
+  }
+
+  public ConstantOptionletVolatility(Date referenceDate, Calendar cal, BusinessDayConvention bdc, double volatility, DayCounter dayCounter, VolatilityType type) {
+    this(QuantLibJNI.new_ConstantOptionletVolatility__SWIG_1(Date.getCPtr(referenceDate), referenceDate, Calendar.getCPtr(cal), cal, bdc.swigValue(), volatility, DayCounter.getCPtr(dayCounter), dayCounter, type.swigValue()), true);
+  }
+
   public ConstantOptionletVolatility(Date referenceDate, Calendar cal, BusinessDayConvention bdc, double volatility, DayCounter dayCounter) {
-    this(QuantLibJNI.new_ConstantOptionletVolatility__SWIG_0(Date.getCPtr(referenceDate), referenceDate, Calendar.getCPtr(cal), cal, bdc.swigValue(), volatility, DayCounter.getCPtr(dayCounter), dayCounter), true);
+    this(QuantLibJNI.new_ConstantOptionletVolatility__SWIG_2(Date.getCPtr(referenceDate), referenceDate, Calendar.getCPtr(cal), cal, bdc.swigValue(), volatility, DayCounter.getCPtr(dayCounter), dayCounter), true);
+  }
+
+  public ConstantOptionletVolatility(Date referenceDate, Calendar cal, BusinessDayConvention bdc, QuoteHandle volatility, DayCounter dayCounter, VolatilityType type, double shift) {
+    this(QuantLibJNI.new_ConstantOptionletVolatility__SWIG_3(Date.getCPtr(referenceDate), referenceDate, Calendar.getCPtr(cal), cal, bdc.swigValue(), QuoteHandle.getCPtr(volatility), volatility, DayCounter.getCPtr(dayCounter), dayCounter, type.swigValue(), shift), true);
+  }
+
+  public ConstantOptionletVolatility(Date referenceDate, Calendar cal, BusinessDayConvention bdc, QuoteHandle volatility, DayCounter dayCounter, VolatilityType type) {
+    this(QuantLibJNI.new_ConstantOptionletVolatility__SWIG_4(Date.getCPtr(referenceDate), referenceDate, Calendar.getCPtr(cal), cal, bdc.swigValue(), QuoteHandle.getCPtr(volatility), volatility, DayCounter.getCPtr(dayCounter), dayCounter, type.swigValue()), true);
   }
 
   public ConstantOptionletVolatility(Date referenceDate, Calendar cal, BusinessDayConvention bdc, QuoteHandle volatility, DayCounter dayCounter) {
-    this(QuantLibJNI.new_ConstantOptionletVolatility__SWIG_1(Date.getCPtr(referenceDate), referenceDate, Calendar.getCPtr(cal), cal, bdc.swigValue(), QuoteHandle.getCPtr(volatility), volatility, DayCounter.getCPtr(dayCounter), dayCounter), true);
+    this(QuantLibJNI.new_ConstantOptionletVolatility__SWIG_5(Date.getCPtr(referenceDate), referenceDate, Calendar.getCPtr(cal), cal, bdc.swigValue(), QuoteHandle.getCPtr(volatility), volatility, DayCounter.getCPtr(dayCounter), dayCounter), true);
+  }
+
+  public ConstantOptionletVolatility(long settlementDays, Calendar cal, BusinessDayConvention bdc, double volatility, DayCounter dayCounter, VolatilityType type, double shift) {
+    this(QuantLibJNI.new_ConstantOptionletVolatility__SWIG_6(settlementDays, Calendar.getCPtr(cal), cal, bdc.swigValue(), volatility, DayCounter.getCPtr(dayCounter), dayCounter, type.swigValue(), shift), true);
+  }
+
+  public ConstantOptionletVolatility(long settlementDays, Calendar cal, BusinessDayConvention bdc, double volatility, DayCounter dayCounter, VolatilityType type) {
+    this(QuantLibJNI.new_ConstantOptionletVolatility__SWIG_7(settlementDays, Calendar.getCPtr(cal), cal, bdc.swigValue(), volatility, DayCounter.getCPtr(dayCounter), dayCounter, type.swigValue()), true);
   }
 
   public ConstantOptionletVolatility(long settlementDays, Calendar cal, BusinessDayConvention bdc, double volatility, DayCounter dayCounter) {
-    this(QuantLibJNI.new_ConstantOptionletVolatility__SWIG_2(settlementDays, Calendar.getCPtr(cal), cal, bdc.swigValue(), volatility, DayCounter.getCPtr(dayCounter), dayCounter), true);
+    this(QuantLibJNI.new_ConstantOptionletVolatility__SWIG_8(settlementDays, Calendar.getCPtr(cal), cal, bdc.swigValue(), volatility, DayCounter.getCPtr(dayCounter), dayCounter), true);
+  }
+
+  public ConstantOptionletVolatility(long settlementDays, Calendar cal, BusinessDayConvention bdc, QuoteHandle volatility, DayCounter dayCounter, VolatilityType type, double shift) {
+    this(QuantLibJNI.new_ConstantOptionletVolatility__SWIG_9(settlementDays, Calendar.getCPtr(cal), cal, bdc.swigValue(), QuoteHandle.getCPtr(volatility), volatility, DayCounter.getCPtr(dayCounter), dayCounter, type.swigValue(), shift), true);
+  }
+
+  public ConstantOptionletVolatility(long settlementDays, Calendar cal, BusinessDayConvention bdc, QuoteHandle volatility, DayCounter dayCounter, VolatilityType type) {
+    this(QuantLibJNI.new_ConstantOptionletVolatility__SWIG_10(settlementDays, Calendar.getCPtr(cal), cal, bdc.swigValue(), QuoteHandle.getCPtr(volatility), volatility, DayCounter.getCPtr(dayCounter), dayCounter, type.swigValue()), true);
   }
 
   public ConstantOptionletVolatility(long settlementDays, Calendar cal, BusinessDayConvention bdc, QuoteHandle volatility, DayCounter dayCounter) {
-    this(QuantLibJNI.new_ConstantOptionletVolatility__SWIG_3(settlementDays, Calendar.getCPtr(cal), cal, bdc.swigValue(), QuoteHandle.getCPtr(volatility), volatility, DayCounter.getCPtr(dayCounter), dayCounter), true);
+    this(QuantLibJNI.new_ConstantOptionletVolatility__SWIG_11(settlementDays, Calendar.getCPtr(cal), cal, bdc.swigValue(), QuoteHandle.getCPtr(volatility), volatility, DayCounter.getCPtr(dayCounter), dayCounter), true);
   }
 
 }

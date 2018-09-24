@@ -35,8 +35,57 @@ public class Actual365Fixed extends DayCounter {
     super.delete();
   }
 
+  public Actual365Fixed(Actual365Fixed.Convention c) {
+    this(QuantLibJNI.new_Actual365Fixed__SWIG_0(c.swigValue()), true);
+  }
+
   public Actual365Fixed() {
-    this(QuantLibJNI.new_Actual365Fixed(), true);
+    this(QuantLibJNI.new_Actual365Fixed__SWIG_1(), true);
+  }
+
+  public final static class Convention {
+    public final static Actual365Fixed.Convention Standard = new Actual365Fixed.Convention("Standard");
+    public final static Actual365Fixed.Convention Canadian = new Actual365Fixed.Convention("Canadian");
+    public final static Actual365Fixed.Convention NoLeap = new Actual365Fixed.Convention("NoLeap");
+
+    public final int swigValue() {
+      return swigValue;
+    }
+
+    public String toString() {
+      return swigName;
+    }
+
+    public static Convention swigToEnum(int swigValue) {
+      if (swigValue < swigValues.length && swigValue >= 0 && swigValues[swigValue].swigValue == swigValue)
+        return swigValues[swigValue];
+      for (int i = 0; i < swigValues.length; i++)
+        if (swigValues[i].swigValue == swigValue)
+          return swigValues[i];
+      throw new IllegalArgumentException("No enum " + Convention.class + " with value " + swigValue);
+    }
+
+    private Convention(String swigName) {
+      this.swigName = swigName;
+      this.swigValue = swigNext++;
+    }
+
+    private Convention(String swigName, int swigValue) {
+      this.swigName = swigName;
+      this.swigValue = swigValue;
+      swigNext = swigValue+1;
+    }
+
+    private Convention(String swigName, Convention swigEnum) {
+      this.swigName = swigName;
+      this.swigValue = swigEnum.swigValue;
+      swigNext = this.swigValue+1;
+    }
+
+    private static Convention[] swigValues = { Standard, Canadian, NoLeap };
+    private static int swigNext = 0;
+    private final int swigValue;
+    private final String swigName;
   }
 
 }

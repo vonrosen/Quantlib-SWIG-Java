@@ -139,6 +139,10 @@ public class SwapRateHelper extends RateHelper {
     this(QuantLibJNI.new_SwapRateHelper__SWIG_25(rate, SwapIndex.getCPtr(index), index), true);
   }
 
+  public double spread() {
+    return QuantLibJNI.SwapRateHelper_spread(swigCPtr, this);
+  }
+
   public VanillaSwap swap() {
     return new VanillaSwap(QuantLibJNI.SwapRateHelper_swap(swigCPtr, this), true);
   }

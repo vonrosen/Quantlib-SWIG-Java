@@ -35,8 +35,28 @@ public class FittingMethod {
     }
   }
 
+  public long size() {
+    return QuantLibJNI.FittingMethod_size(swigCPtr, this);
+  }
+
   public Array solution() {
     return new Array(QuantLibJNI.FittingMethod_solution(swigCPtr, this), true);
+  }
+
+  public int numberOfIterations() {
+    return QuantLibJNI.FittingMethod_numberOfIterations(swigCPtr, this);
+  }
+
+  public double minimumCostValue() {
+    return QuantLibJNI.FittingMethod_minimumCostValue(swigCPtr, this);
+  }
+
+  public boolean constrainAtZero() {
+    return QuantLibJNI.FittingMethod_constrainAtZero(swigCPtr, this);
+  }
+
+  public Array weights() {
+    return new Array(QuantLibJNI.FittingMethod_weights(swigCPtr, this), true);
   }
 
 }

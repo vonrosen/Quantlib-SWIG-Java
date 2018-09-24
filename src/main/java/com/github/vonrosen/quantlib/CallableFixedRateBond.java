@@ -39,4 +39,48 @@ public class CallableFixedRateBond extends Bond {
     this(QuantLibJNI.new_CallableFixedRateBond(settlementDays, faceAmount, Schedule.getCPtr(schedule), schedule, DoubleVector.getCPtr(coupons), coupons, DayCounter.getCPtr(accrualDayCounter), accrualDayCounter, paymentConvention.swigValue(), redemption, Date.getCPtr(issueDate), issueDate, CallabilitySchedule.getCPtr(putCallSchedule), putCallSchedule), true);
   }
 
+  public double OAS(double cleanPrice, YieldTermStructureHandle engineTS, DayCounter dc, Compounding compounding, Frequency freq, Date settlementDate, double accuracy, long maxIterations, double guess) {
+    return QuantLibJNI.CallableFixedRateBond_OAS__SWIG_0(swigCPtr, this, cleanPrice, YieldTermStructureHandle.getCPtr(engineTS), engineTS, DayCounter.getCPtr(dc), dc, compounding.swigValue(), freq.swigValue(), Date.getCPtr(settlementDate), settlementDate, accuracy, maxIterations, guess);
+  }
+
+  public double OAS(double cleanPrice, YieldTermStructureHandle engineTS, DayCounter dc, Compounding compounding, Frequency freq, Date settlementDate, double accuracy, long maxIterations) {
+    return QuantLibJNI.CallableFixedRateBond_OAS__SWIG_1(swigCPtr, this, cleanPrice, YieldTermStructureHandle.getCPtr(engineTS), engineTS, DayCounter.getCPtr(dc), dc, compounding.swigValue(), freq.swigValue(), Date.getCPtr(settlementDate), settlementDate, accuracy, maxIterations);
+  }
+
+  public double OAS(double cleanPrice, YieldTermStructureHandle engineTS, DayCounter dc, Compounding compounding, Frequency freq, Date settlementDate, double accuracy) {
+    return QuantLibJNI.CallableFixedRateBond_OAS__SWIG_2(swigCPtr, this, cleanPrice, YieldTermStructureHandle.getCPtr(engineTS), engineTS, DayCounter.getCPtr(dc), dc, compounding.swigValue(), freq.swigValue(), Date.getCPtr(settlementDate), settlementDate, accuracy);
+  }
+
+  public double OAS(double cleanPrice, YieldTermStructureHandle engineTS, DayCounter dc, Compounding compounding, Frequency freq, Date settlementDate) {
+    return QuantLibJNI.CallableFixedRateBond_OAS__SWIG_3(swigCPtr, this, cleanPrice, YieldTermStructureHandle.getCPtr(engineTS), engineTS, DayCounter.getCPtr(dc), dc, compounding.swigValue(), freq.swigValue(), Date.getCPtr(settlementDate), settlementDate);
+  }
+
+  public double OAS(double cleanPrice, YieldTermStructureHandle engineTS, DayCounter dc, Compounding compounding, Frequency freq) {
+    return QuantLibJNI.CallableFixedRateBond_OAS__SWIG_4(swigCPtr, this, cleanPrice, YieldTermStructureHandle.getCPtr(engineTS), engineTS, DayCounter.getCPtr(dc), dc, compounding.swigValue(), freq.swigValue());
+  }
+
+  public double cleanPriceOAS(double oas, YieldTermStructureHandle engineTS, DayCounter dayCounter, Compounding compounding, Frequency frequency, Date settlementDate) {
+    return QuantLibJNI.CallableFixedRateBond_cleanPriceOAS__SWIG_0(swigCPtr, this, oas, YieldTermStructureHandle.getCPtr(engineTS), engineTS, DayCounter.getCPtr(dayCounter), dayCounter, compounding.swigValue(), frequency.swigValue(), Date.getCPtr(settlementDate), settlementDate);
+  }
+
+  public double cleanPriceOAS(double oas, YieldTermStructureHandle engineTS, DayCounter dayCounter, Compounding compounding, Frequency frequency) {
+    return QuantLibJNI.CallableFixedRateBond_cleanPriceOAS__SWIG_1(swigCPtr, this, oas, YieldTermStructureHandle.getCPtr(engineTS), engineTS, DayCounter.getCPtr(dayCounter), dayCounter, compounding.swigValue(), frequency.swigValue());
+  }
+
+  public double effectiveDuration(double oas, YieldTermStructureHandle engineTS, DayCounter dayCounter, Compounding compounding, Frequency frequency, double bump) {
+    return QuantLibJNI.CallableFixedRateBond_effectiveDuration__SWIG_0(swigCPtr, this, oas, YieldTermStructureHandle.getCPtr(engineTS), engineTS, DayCounter.getCPtr(dayCounter), dayCounter, compounding.swigValue(), frequency.swigValue(), bump);
+  }
+
+  public double effectiveDuration(double oas, YieldTermStructureHandle engineTS, DayCounter dayCounter, Compounding compounding, Frequency frequency) {
+    return QuantLibJNI.CallableFixedRateBond_effectiveDuration__SWIG_1(swigCPtr, this, oas, YieldTermStructureHandle.getCPtr(engineTS), engineTS, DayCounter.getCPtr(dayCounter), dayCounter, compounding.swigValue(), frequency.swigValue());
+  }
+
+  public double effectiveConvexity(double oas, YieldTermStructureHandle engineTS, DayCounter dayCounter, Compounding compounding, Frequency frequency, double bump) {
+    return QuantLibJNI.CallableFixedRateBond_effectiveConvexity__SWIG_0(swigCPtr, this, oas, YieldTermStructureHandle.getCPtr(engineTS), engineTS, DayCounter.getCPtr(dayCounter), dayCounter, compounding.swigValue(), frequency.swigValue(), bump);
+  }
+
+  public double effectiveConvexity(double oas, YieldTermStructureHandle engineTS, DayCounter dayCounter, Compounding compounding, Frequency frequency) {
+    return QuantLibJNI.CallableFixedRateBond_effectiveConvexity__SWIG_1(swigCPtr, this, oas, YieldTermStructureHandle.getCPtr(engineTS), engineTS, DayCounter.getCPtr(dayCounter), dayCounter, compounding.swigValue(), frequency.swigValue());
+  }
+
 }

@@ -35,12 +35,48 @@ public class OISRateHelper extends RateHelper {
     super.delete();
   }
 
+  public OISRateHelper(long settlementDays, Period tenor, QuoteHandle rate, OvernightIndex index, YieldTermStructureHandle discountingCurve, boolean telescopicValueDates, long paymentLag, BusinessDayConvention paymentConvention, Frequency paymentFrequency, Calendar paymentCalendar, Period forwardStart, double overnightSpread) {
+    this(QuantLibJNI.new_OISRateHelper__SWIG_0(settlementDays, Period.getCPtr(tenor), tenor, QuoteHandle.getCPtr(rate), rate, OvernightIndex.getCPtr(index), index, YieldTermStructureHandle.getCPtr(discountingCurve), discountingCurve, telescopicValueDates, paymentLag, paymentConvention.swigValue(), paymentFrequency.swigValue(), Calendar.getCPtr(paymentCalendar), paymentCalendar, Period.getCPtr(forwardStart), forwardStart, overnightSpread), true);
+  }
+
+  public OISRateHelper(long settlementDays, Period tenor, QuoteHandle rate, OvernightIndex index, YieldTermStructureHandle discountingCurve, boolean telescopicValueDates, long paymentLag, BusinessDayConvention paymentConvention, Frequency paymentFrequency, Calendar paymentCalendar, Period forwardStart) {
+    this(QuantLibJNI.new_OISRateHelper__SWIG_1(settlementDays, Period.getCPtr(tenor), tenor, QuoteHandle.getCPtr(rate), rate, OvernightIndex.getCPtr(index), index, YieldTermStructureHandle.getCPtr(discountingCurve), discountingCurve, telescopicValueDates, paymentLag, paymentConvention.swigValue(), paymentFrequency.swigValue(), Calendar.getCPtr(paymentCalendar), paymentCalendar, Period.getCPtr(forwardStart), forwardStart), true);
+  }
+
+  public OISRateHelper(long settlementDays, Period tenor, QuoteHandle rate, OvernightIndex index, YieldTermStructureHandle discountingCurve, boolean telescopicValueDates, long paymentLag, BusinessDayConvention paymentConvention, Frequency paymentFrequency, Calendar paymentCalendar) {
+    this(QuantLibJNI.new_OISRateHelper__SWIG_2(settlementDays, Period.getCPtr(tenor), tenor, QuoteHandle.getCPtr(rate), rate, OvernightIndex.getCPtr(index), index, YieldTermStructureHandle.getCPtr(discountingCurve), discountingCurve, telescopicValueDates, paymentLag, paymentConvention.swigValue(), paymentFrequency.swigValue(), Calendar.getCPtr(paymentCalendar), paymentCalendar), true);
+  }
+
+  public OISRateHelper(long settlementDays, Period tenor, QuoteHandle rate, OvernightIndex index, YieldTermStructureHandle discountingCurve, boolean telescopicValueDates, long paymentLag, BusinessDayConvention paymentConvention, Frequency paymentFrequency) {
+    this(QuantLibJNI.new_OISRateHelper__SWIG_3(settlementDays, Period.getCPtr(tenor), tenor, QuoteHandle.getCPtr(rate), rate, OvernightIndex.getCPtr(index), index, YieldTermStructureHandle.getCPtr(discountingCurve), discountingCurve, telescopicValueDates, paymentLag, paymentConvention.swigValue(), paymentFrequency.swigValue()), true);
+  }
+
+  public OISRateHelper(long settlementDays, Period tenor, QuoteHandle rate, OvernightIndex index, YieldTermStructureHandle discountingCurve, boolean telescopicValueDates, long paymentLag, BusinessDayConvention paymentConvention) {
+    this(QuantLibJNI.new_OISRateHelper__SWIG_4(settlementDays, Period.getCPtr(tenor), tenor, QuoteHandle.getCPtr(rate), rate, OvernightIndex.getCPtr(index), index, YieldTermStructureHandle.getCPtr(discountingCurve), discountingCurve, telescopicValueDates, paymentLag, paymentConvention.swigValue()), true);
+  }
+
+  public OISRateHelper(long settlementDays, Period tenor, QuoteHandle rate, OvernightIndex index, YieldTermStructureHandle discountingCurve, boolean telescopicValueDates, long paymentLag) {
+    this(QuantLibJNI.new_OISRateHelper__SWIG_5(settlementDays, Period.getCPtr(tenor), tenor, QuoteHandle.getCPtr(rate), rate, OvernightIndex.getCPtr(index), index, YieldTermStructureHandle.getCPtr(discountingCurve), discountingCurve, telescopicValueDates, paymentLag), true);
+  }
+
+  public OISRateHelper(long settlementDays, Period tenor, QuoteHandle rate, OvernightIndex index, YieldTermStructureHandle discountingCurve, boolean telescopicValueDates) {
+    this(QuantLibJNI.new_OISRateHelper__SWIG_6(settlementDays, Period.getCPtr(tenor), tenor, QuoteHandle.getCPtr(rate), rate, OvernightIndex.getCPtr(index), index, YieldTermStructureHandle.getCPtr(discountingCurve), discountingCurve, telescopicValueDates), true);
+  }
+
   public OISRateHelper(long settlementDays, Period tenor, QuoteHandle rate, OvernightIndex index, YieldTermStructureHandle discountingCurve) {
-    this(QuantLibJNI.new_OISRateHelper__SWIG_0(settlementDays, Period.getCPtr(tenor), tenor, QuoteHandle.getCPtr(rate), rate, OvernightIndex.getCPtr(index), index, YieldTermStructureHandle.getCPtr(discountingCurve), discountingCurve), true);
+    this(QuantLibJNI.new_OISRateHelper__SWIG_7(settlementDays, Period.getCPtr(tenor), tenor, QuoteHandle.getCPtr(rate), rate, OvernightIndex.getCPtr(index), index, YieldTermStructureHandle.getCPtr(discountingCurve), discountingCurve), true);
   }
 
   public OISRateHelper(long settlementDays, Period tenor, QuoteHandle rate, OvernightIndex index) {
-    this(QuantLibJNI.new_OISRateHelper__SWIG_1(settlementDays, Period.getCPtr(tenor), tenor, QuoteHandle.getCPtr(rate), rate, OvernightIndex.getCPtr(index), index), true);
+    this(QuantLibJNI.new_OISRateHelper__SWIG_8(settlementDays, Period.getCPtr(tenor), tenor, QuoteHandle.getCPtr(rate), rate, OvernightIndex.getCPtr(index), index), true);
+  }
+
+  public double impliedQuote() {
+    return QuantLibJNI.OISRateHelper_impliedQuote(swigCPtr, this);
+  }
+
+  public OvernightIndexedSwap swap() {
+    return new OvernightIndexedSwap(QuantLibJNI.OISRateHelper_swap(swigCPtr, this), true);
   }
 
 }

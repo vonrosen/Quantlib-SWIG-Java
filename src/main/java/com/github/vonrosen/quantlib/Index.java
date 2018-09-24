@@ -44,8 +44,12 @@ public class Index {
     return QuantLibJNI.Index_isNull(swigCPtr, this);
   }
 
+  public void addFixings(DateVector fixingDates, DoubleVector fixings, boolean forceOverwrite) {
+    QuantLibJNI.Index_addFixings__SWIG_0(swigCPtr, this, DateVector.getCPtr(fixingDates), fixingDates, DoubleVector.getCPtr(fixings), fixings, forceOverwrite);
+  }
+
   public void addFixings(DateVector fixingDates, DoubleVector fixings) {
-    QuantLibJNI.Index_addFixings(swigCPtr, this, DateVector.getCPtr(fixingDates), fixingDates, DoubleVector.getCPtr(fixings), fixings);
+    QuantLibJNI.Index_addFixings__SWIG_1(swigCPtr, this, DateVector.getCPtr(fixingDates), fixingDates, DoubleVector.getCPtr(fixings), fixings);
   }
 
   public String toString() {
@@ -80,8 +84,20 @@ public class Index {
     return QuantLibJNI.Index_fixing__SWIG_1(swigCPtr, this, Date.getCPtr(fixingDate), fixingDate);
   }
 
+  public void addFixing(Date fixingDate, double fixing, boolean forceOverwrite) {
+    QuantLibJNI.Index_addFixing__SWIG_0(swigCPtr, this, Date.getCPtr(fixingDate), fixingDate, fixing, forceOverwrite);
+  }
+
   public void addFixing(Date fixingDate, double fixing) {
-    QuantLibJNI.Index_addFixing(swigCPtr, this, Date.getCPtr(fixingDate), fixingDate, fixing);
+    QuantLibJNI.Index_addFixing__SWIG_1(swigCPtr, this, Date.getCPtr(fixingDate), fixingDate, fixing);
+  }
+
+  public RealTimeSeries timeSeries() {
+    return new RealTimeSeries(QuantLibJNI.Index_timeSeries(swigCPtr, this), false);
+  }
+
+  public void clearFixings() {
+    QuantLibJNI.Index_clearFixings(swigCPtr, this);
   }
 
 }

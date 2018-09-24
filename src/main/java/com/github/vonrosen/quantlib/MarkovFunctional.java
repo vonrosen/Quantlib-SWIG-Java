@@ -75,20 +75,20 @@ public class MarkovFunctional extends Gaussian1dModel {
     this(QuantLibJNI.new_MarkovFunctional__SWIG_9(YieldTermStructureHandle.getCPtr(termStructure), termStructure, reversion, DateVector.getCPtr(volstepdates), volstepdates, DoubleVector.getCPtr(volatilities), volatilities, SwaptionVolatilityStructureHandle.getCPtr(swaptionVol), swaptionVol, DateVector.getCPtr(swaptionExpiries), swaptionExpiries, PeriodVector.getCPtr(swaptionTenors), swaptionTenors, SwapIndex.getCPtr(swapIndexBase), swapIndexBase), true);
   }
 
-  public void calibrate(CalibrationHelperVector helper, OptimizationMethod method, EndCriteria endCriteria, Constraint constraint, DoubleVector weights, BoolVector fixParameters) {
-    QuantLibJNI.MarkovFunctional_calibrate__SWIG_0(swigCPtr, this, CalibrationHelperVector.getCPtr(helper), helper, OptimizationMethod.getCPtr(method), method, EndCriteria.getCPtr(endCriteria), endCriteria, Constraint.getCPtr(constraint), constraint, DoubleVector.getCPtr(weights), weights, BoolVector.getCPtr(fixParameters), fixParameters);
+  public void calibrate(CalibrationHelperVector hs, OptimizationMethod method, EndCriteria endCriteria, Constraint constraint, DoubleVector weights, BoolVector fixParameters) {
+    QuantLibJNI.MarkovFunctional_calibrate__SWIG_0(swigCPtr, this, CalibrationHelperVector.getCPtr(hs), hs, OptimizationMethod.getCPtr(method), method, EndCriteria.getCPtr(endCriteria), endCriteria, Constraint.getCPtr(constraint), constraint, DoubleVector.getCPtr(weights), weights, BoolVector.getCPtr(fixParameters), fixParameters);
   }
 
-  public void calibrate(CalibrationHelperVector helper, OptimizationMethod method, EndCriteria endCriteria, Constraint constraint, DoubleVector weights) {
-    QuantLibJNI.MarkovFunctional_calibrate__SWIG_1(swigCPtr, this, CalibrationHelperVector.getCPtr(helper), helper, OptimizationMethod.getCPtr(method), method, EndCriteria.getCPtr(endCriteria), endCriteria, Constraint.getCPtr(constraint), constraint, DoubleVector.getCPtr(weights), weights);
+  public void calibrate(CalibrationHelperVector hs, OptimizationMethod method, EndCriteria endCriteria, Constraint constraint, DoubleVector weights) {
+    QuantLibJNI.MarkovFunctional_calibrate__SWIG_1(swigCPtr, this, CalibrationHelperVector.getCPtr(hs), hs, OptimizationMethod.getCPtr(method), method, EndCriteria.getCPtr(endCriteria), endCriteria, Constraint.getCPtr(constraint), constraint, DoubleVector.getCPtr(weights), weights);
   }
 
-  public void calibrate(CalibrationHelperVector helper, OptimizationMethod method, EndCriteria endCriteria, Constraint constraint) {
-    QuantLibJNI.MarkovFunctional_calibrate__SWIG_2(swigCPtr, this, CalibrationHelperVector.getCPtr(helper), helper, OptimizationMethod.getCPtr(method), method, EndCriteria.getCPtr(endCriteria), endCriteria, Constraint.getCPtr(constraint), constraint);
+  public void calibrate(CalibrationHelperVector hs, OptimizationMethod method, EndCriteria endCriteria, Constraint constraint) {
+    QuantLibJNI.MarkovFunctional_calibrate__SWIG_2(swigCPtr, this, CalibrationHelperVector.getCPtr(hs), hs, OptimizationMethod.getCPtr(method), method, EndCriteria.getCPtr(endCriteria), endCriteria, Constraint.getCPtr(constraint), constraint);
   }
 
-  public void calibrate(CalibrationHelperVector helper, OptimizationMethod method, EndCriteria endCriteria) {
-    QuantLibJNI.MarkovFunctional_calibrate__SWIG_3(swigCPtr, this, CalibrationHelperVector.getCPtr(helper), helper, OptimizationMethod.getCPtr(method), method, EndCriteria.getCPtr(endCriteria), endCriteria);
+  public void calibrate(CalibrationHelperVector hs, OptimizationMethod method, EndCriteria endCriteria) {
+    QuantLibJNI.MarkovFunctional_calibrate__SWIG_3(swigCPtr, this, CalibrationHelperVector.getCPtr(hs), hs, OptimizationMethod.getCPtr(method), method, EndCriteria.getCPtr(endCriteria), endCriteria);
   }
 
   public Array volatility() {

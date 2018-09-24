@@ -63,4 +63,8 @@ public class G2 extends ShortRateModel {
     return QuantLibJNI.G2_discount(swigCPtr, this, t);
   }
 
+  public double discountBond(double t, double T, double x, double y) {
+    return QuantLibJNI.G2_discountBond(swigCPtr, this, t, T, x, y);
+  }
+
 }

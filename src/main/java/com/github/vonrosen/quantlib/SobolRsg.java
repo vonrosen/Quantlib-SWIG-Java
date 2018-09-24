@@ -59,6 +59,14 @@ public class SobolRsg {
     return QuantLibJNI.SobolRsg_dimension(swigCPtr, this);
   }
 
+  public void skipTo(long n) {
+    QuantLibJNI.SobolRsg_skipTo(swigCPtr, this, n);
+  }
+
+  public UnsignedIntVector nextInt32Sequence() {
+    return new UnsignedIntVector(QuantLibJNI.SobolRsg_nextInt32Sequence(swigCPtr, this), true);
+  }
+
   public final static class DirectionIntegers {
     public final static SobolRsg.DirectionIntegers Unit = new SobolRsg.DirectionIntegers("Unit");
     public final static SobolRsg.DirectionIntegers Jaeckel = new SobolRsg.DirectionIntegers("Jaeckel");

@@ -35,28 +35,52 @@ public class CreditDefaultSwap extends Instrument {
     super.delete();
   }
 
+  public CreditDefaultSwap(Protection.Side side, double notional, double spread, Schedule schedule, BusinessDayConvention paymentConvention, DayCounter dayCounter, boolean settlesAccrual, boolean paysAtDefaultTime, Date protectionStart) {
+    this(QuantLibJNI.new_CreditDefaultSwap__SWIG_0(side.swigValue(), notional, spread, Schedule.getCPtr(schedule), schedule, paymentConvention.swigValue(), DayCounter.getCPtr(dayCounter), dayCounter, settlesAccrual, paysAtDefaultTime, Date.getCPtr(protectionStart), protectionStart), true);
+  }
+
   public CreditDefaultSwap(Protection.Side side, double notional, double spread, Schedule schedule, BusinessDayConvention paymentConvention, DayCounter dayCounter, boolean settlesAccrual, boolean paysAtDefaultTime) {
-    this(QuantLibJNI.new_CreditDefaultSwap__SWIG_0(side.swigValue(), notional, spread, Schedule.getCPtr(schedule), schedule, paymentConvention.swigValue(), DayCounter.getCPtr(dayCounter), dayCounter, settlesAccrual, paysAtDefaultTime), true);
+    this(QuantLibJNI.new_CreditDefaultSwap__SWIG_1(side.swigValue(), notional, spread, Schedule.getCPtr(schedule), schedule, paymentConvention.swigValue(), DayCounter.getCPtr(dayCounter), dayCounter, settlesAccrual, paysAtDefaultTime), true);
   }
 
   public CreditDefaultSwap(Protection.Side side, double notional, double spread, Schedule schedule, BusinessDayConvention paymentConvention, DayCounter dayCounter, boolean settlesAccrual) {
-    this(QuantLibJNI.new_CreditDefaultSwap__SWIG_1(side.swigValue(), notional, spread, Schedule.getCPtr(schedule), schedule, paymentConvention.swigValue(), DayCounter.getCPtr(dayCounter), dayCounter, settlesAccrual), true);
+    this(QuantLibJNI.new_CreditDefaultSwap__SWIG_2(side.swigValue(), notional, spread, Schedule.getCPtr(schedule), schedule, paymentConvention.swigValue(), DayCounter.getCPtr(dayCounter), dayCounter, settlesAccrual), true);
   }
 
   public CreditDefaultSwap(Protection.Side side, double notional, double spread, Schedule schedule, BusinessDayConvention paymentConvention, DayCounter dayCounter) {
-    this(QuantLibJNI.new_CreditDefaultSwap__SWIG_2(side.swigValue(), notional, spread, Schedule.getCPtr(schedule), schedule, paymentConvention.swigValue(), DayCounter.getCPtr(dayCounter), dayCounter), true);
+    this(QuantLibJNI.new_CreditDefaultSwap__SWIG_3(side.swigValue(), notional, spread, Schedule.getCPtr(schedule), schedule, paymentConvention.swigValue(), DayCounter.getCPtr(dayCounter), dayCounter), true);
+  }
+
+  public CreditDefaultSwap(Protection.Side side, double notional, double upfront, double spread, Schedule schedule, BusinessDayConvention paymentConvention, DayCounter dayCounter, boolean settlesAccrual, boolean paysAtDefaultTime, Date protectionStart, Date upfrontDate, Claim claim, DayCounter lastPeriodDayCounter, boolean rebatesAccrual) {
+    this(QuantLibJNI.new_CreditDefaultSwap__SWIG_4(side.swigValue(), notional, upfront, spread, Schedule.getCPtr(schedule), schedule, paymentConvention.swigValue(), DayCounter.getCPtr(dayCounter), dayCounter, settlesAccrual, paysAtDefaultTime, Date.getCPtr(protectionStart), protectionStart, Date.getCPtr(upfrontDate), upfrontDate, Claim.getCPtr(claim), claim, DayCounter.getCPtr(lastPeriodDayCounter), lastPeriodDayCounter, rebatesAccrual), true);
+  }
+
+  public CreditDefaultSwap(Protection.Side side, double notional, double upfront, double spread, Schedule schedule, BusinessDayConvention paymentConvention, DayCounter dayCounter, boolean settlesAccrual, boolean paysAtDefaultTime, Date protectionStart, Date upfrontDate, Claim claim, DayCounter lastPeriodDayCounter) {
+    this(QuantLibJNI.new_CreditDefaultSwap__SWIG_5(side.swigValue(), notional, upfront, spread, Schedule.getCPtr(schedule), schedule, paymentConvention.swigValue(), DayCounter.getCPtr(dayCounter), dayCounter, settlesAccrual, paysAtDefaultTime, Date.getCPtr(protectionStart), protectionStart, Date.getCPtr(upfrontDate), upfrontDate, Claim.getCPtr(claim), claim, DayCounter.getCPtr(lastPeriodDayCounter), lastPeriodDayCounter), true);
+  }
+
+  public CreditDefaultSwap(Protection.Side side, double notional, double upfront, double spread, Schedule schedule, BusinessDayConvention paymentConvention, DayCounter dayCounter, boolean settlesAccrual, boolean paysAtDefaultTime, Date protectionStart, Date upfrontDate, Claim claim) {
+    this(QuantLibJNI.new_CreditDefaultSwap__SWIG_6(side.swigValue(), notional, upfront, spread, Schedule.getCPtr(schedule), schedule, paymentConvention.swigValue(), DayCounter.getCPtr(dayCounter), dayCounter, settlesAccrual, paysAtDefaultTime, Date.getCPtr(protectionStart), protectionStart, Date.getCPtr(upfrontDate), upfrontDate, Claim.getCPtr(claim), claim), true);
+  }
+
+  public CreditDefaultSwap(Protection.Side side, double notional, double upfront, double spread, Schedule schedule, BusinessDayConvention paymentConvention, DayCounter dayCounter, boolean settlesAccrual, boolean paysAtDefaultTime, Date protectionStart, Date upfrontDate) {
+    this(QuantLibJNI.new_CreditDefaultSwap__SWIG_7(side.swigValue(), notional, upfront, spread, Schedule.getCPtr(schedule), schedule, paymentConvention.swigValue(), DayCounter.getCPtr(dayCounter), dayCounter, settlesAccrual, paysAtDefaultTime, Date.getCPtr(protectionStart), protectionStart, Date.getCPtr(upfrontDate), upfrontDate), true);
+  }
+
+  public CreditDefaultSwap(Protection.Side side, double notional, double upfront, double spread, Schedule schedule, BusinessDayConvention paymentConvention, DayCounter dayCounter, boolean settlesAccrual, boolean paysAtDefaultTime, Date protectionStart) {
+    this(QuantLibJNI.new_CreditDefaultSwap__SWIG_8(side.swigValue(), notional, upfront, spread, Schedule.getCPtr(schedule), schedule, paymentConvention.swigValue(), DayCounter.getCPtr(dayCounter), dayCounter, settlesAccrual, paysAtDefaultTime, Date.getCPtr(protectionStart), protectionStart), true);
   }
 
   public CreditDefaultSwap(Protection.Side side, double notional, double upfront, double spread, Schedule schedule, BusinessDayConvention paymentConvention, DayCounter dayCounter, boolean settlesAccrual, boolean paysAtDefaultTime) {
-    this(QuantLibJNI.new_CreditDefaultSwap__SWIG_3(side.swigValue(), notional, upfront, spread, Schedule.getCPtr(schedule), schedule, paymentConvention.swigValue(), DayCounter.getCPtr(dayCounter), dayCounter, settlesAccrual, paysAtDefaultTime), true);
+    this(QuantLibJNI.new_CreditDefaultSwap__SWIG_9(side.swigValue(), notional, upfront, spread, Schedule.getCPtr(schedule), schedule, paymentConvention.swigValue(), DayCounter.getCPtr(dayCounter), dayCounter, settlesAccrual, paysAtDefaultTime), true);
   }
 
   public CreditDefaultSwap(Protection.Side side, double notional, double upfront, double spread, Schedule schedule, BusinessDayConvention paymentConvention, DayCounter dayCounter, boolean settlesAccrual) {
-    this(QuantLibJNI.new_CreditDefaultSwap__SWIG_4(side.swigValue(), notional, upfront, spread, Schedule.getCPtr(schedule), schedule, paymentConvention.swigValue(), DayCounter.getCPtr(dayCounter), dayCounter, settlesAccrual), true);
+    this(QuantLibJNI.new_CreditDefaultSwap__SWIG_10(side.swigValue(), notional, upfront, spread, Schedule.getCPtr(schedule), schedule, paymentConvention.swigValue(), DayCounter.getCPtr(dayCounter), dayCounter, settlesAccrual), true);
   }
 
   public CreditDefaultSwap(Protection.Side side, double notional, double upfront, double spread, Schedule schedule, BusinessDayConvention paymentConvention, DayCounter dayCounter) {
-    this(QuantLibJNI.new_CreditDefaultSwap__SWIG_5(side.swigValue(), notional, upfront, spread, Schedule.getCPtr(schedule), schedule, paymentConvention.swigValue(), DayCounter.getCPtr(dayCounter), dayCounter), true);
+    this(QuantLibJNI.new_CreditDefaultSwap__SWIG_11(side.swigValue(), notional, upfront, spread, Schedule.getCPtr(schedule), schedule, paymentConvention.swigValue(), DayCounter.getCPtr(dayCounter), dayCounter), true);
   }
 
   public Protection.Side side() {
@@ -111,20 +135,30 @@ public class CreditDefaultSwap extends Instrument {
     return QuantLibJNI.CreditDefaultSwap_upfrontNPV(swigCPtr, this);
   }
 
+  public double impliedHazardRate(double targetNPV, YieldTermStructureHandle discountCurve, DayCounter dayCounter, double recoveryRate, double accuracy, _CreditDefaultSwap.PricingModel model) {
+    return QuantLibJNI.CreditDefaultSwap_impliedHazardRate__SWIG_0(swigCPtr, this, targetNPV, YieldTermStructureHandle.getCPtr(discountCurve), discountCurve, DayCounter.getCPtr(dayCounter), dayCounter, recoveryRate, accuracy, model.swigValue());
+  }
+
   public double impliedHazardRate(double targetNPV, YieldTermStructureHandle discountCurve, DayCounter dayCounter, double recoveryRate, double accuracy) {
-    return QuantLibJNI.CreditDefaultSwap_impliedHazardRate__SWIG_0(swigCPtr, this, targetNPV, YieldTermStructureHandle.getCPtr(discountCurve), discountCurve, DayCounter.getCPtr(dayCounter), dayCounter, recoveryRate, accuracy);
+    return QuantLibJNI.CreditDefaultSwap_impliedHazardRate__SWIG_1(swigCPtr, this, targetNPV, YieldTermStructureHandle.getCPtr(discountCurve), discountCurve, DayCounter.getCPtr(dayCounter), dayCounter, recoveryRate, accuracy);
   }
 
   public double impliedHazardRate(double targetNPV, YieldTermStructureHandle discountCurve, DayCounter dayCounter, double recoveryRate) {
-    return QuantLibJNI.CreditDefaultSwap_impliedHazardRate__SWIG_1(swigCPtr, this, targetNPV, YieldTermStructureHandle.getCPtr(discountCurve), discountCurve, DayCounter.getCPtr(dayCounter), dayCounter, recoveryRate);
+    return QuantLibJNI.CreditDefaultSwap_impliedHazardRate__SWIG_2(swigCPtr, this, targetNPV, YieldTermStructureHandle.getCPtr(discountCurve), discountCurve, DayCounter.getCPtr(dayCounter), dayCounter, recoveryRate);
   }
 
   public double impliedHazardRate(double targetNPV, YieldTermStructureHandle discountCurve, DayCounter dayCounter) {
-    return QuantLibJNI.CreditDefaultSwap_impliedHazardRate__SWIG_2(swigCPtr, this, targetNPV, YieldTermStructureHandle.getCPtr(discountCurve), discountCurve, DayCounter.getCPtr(dayCounter), dayCounter);
+    return QuantLibJNI.CreditDefaultSwap_impliedHazardRate__SWIG_3(swigCPtr, this, targetNPV, YieldTermStructureHandle.getCPtr(discountCurve), discountCurve, DayCounter.getCPtr(dayCounter), dayCounter);
+  }
+
+  public double conventionalSpread(double conventionalRecovery, YieldTermStructureHandle discountCurve, DayCounter dayCounter) {
+    return QuantLibJNI.CreditDefaultSwap_conventionalSpread(swigCPtr, this, conventionalRecovery, YieldTermStructureHandle.getCPtr(discountCurve), discountCurve, DayCounter.getCPtr(dayCounter), dayCounter);
   }
 
   public Leg coupons() {
     return new Leg(QuantLibJNI.CreditDefaultSwap_coupons(swigCPtr, this), true);
   }
 
+  public final static _CreditDefaultSwap.PricingModel Midpoint = _CreditDefaultSwap.PricingModel.swigToEnum(QuantLibJNI.CreditDefaultSwap_Midpoint_get());
+  public final static _CreditDefaultSwap.PricingModel ISDA = _CreditDefaultSwap.PricingModel.swigToEnum(QuantLibJNI.CreditDefaultSwap_ISDA_get());
 }

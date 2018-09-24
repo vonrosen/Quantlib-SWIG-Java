@@ -35,8 +35,12 @@ public class Actual360 extends DayCounter {
     super.delete();
   }
 
+  public Actual360(boolean includeLastDay) {
+    this(QuantLibJNI.new_Actual360__SWIG_0(includeLastDay), true);
+  }
+
   public Actual360() {
-    this(QuantLibJNI.new_Actual360(), true);
+    this(QuantLibJNI.new_Actual360__SWIG_1(), true);
   }
 
 }

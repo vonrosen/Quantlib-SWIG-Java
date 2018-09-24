@@ -47,6 +47,18 @@ public class Bond extends Instrument {
     this(QuantLibJNI.new_Bond__SWIG_2(settlementDays, Calendar.getCPtr(calendar), calendar, faceAmount, Date.getCPtr(maturityDate), maturityDate), true);
   }
 
+  public Bond(long settlementDays, Calendar calendar, Date issueDate, Leg coupons) {
+    this(QuantLibJNI.new_Bond__SWIG_3(settlementDays, Calendar.getCPtr(calendar), calendar, Date.getCPtr(issueDate), issueDate, Leg.getCPtr(coupons), coupons), true);
+  }
+
+  public Bond(long settlementDays, Calendar calendar, Date issueDate) {
+    this(QuantLibJNI.new_Bond__SWIG_4(settlementDays, Calendar.getCPtr(calendar), calendar, Date.getCPtr(issueDate), issueDate), true);
+  }
+
+  public Bond(long settlementDays, Calendar calendar) {
+    this(QuantLibJNI.new_Bond__SWIG_5(settlementDays, Calendar.getCPtr(calendar), calendar), true);
+  }
+
   public double nextCouponRate(Date d) {
     return QuantLibJNI.Bond_nextCouponRate__SWIG_0(swigCPtr, this, Date.getCPtr(d), d);
   }

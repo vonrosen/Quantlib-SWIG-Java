@@ -55,6 +55,14 @@ public class ZeroCouponInflationSwap extends Instrument {
     return QuantLibJNI.ZeroCouponInflationSwap_fairRate(swigCPtr, this);
   }
 
+  public double fixedLegNPV() {
+    return QuantLibJNI.ZeroCouponInflationSwap_fixedLegNPV(swigCPtr, this);
+  }
+
+  public double inflationLegNPV() {
+    return QuantLibJNI.ZeroCouponInflationSwap_inflationLegNPV(swigCPtr, this);
+  }
+
   public Leg fixedLeg() {
     return new Leg(QuantLibJNI.ZeroCouponInflationSwap_fixedLeg(swigCPtr, this), true);
   }

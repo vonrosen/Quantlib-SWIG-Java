@@ -59,4 +59,20 @@ public class SwapIndex extends InterestRateIndex {
     return new YieldTermStructureHandle(QuantLibJNI.SwapIndex_forwardingTermStructure(swigCPtr, this), true);
   }
 
+  public YieldTermStructureHandle discountingTermStructure() {
+    return new YieldTermStructureHandle(QuantLibJNI.SwapIndex_discountingTermStructure(swigCPtr, this), true);
+  }
+
+  public SwapIndex clone(YieldTermStructureHandle h) {
+    return new SwapIndex(QuantLibJNI.SwapIndex_clone__SWIG_0(swigCPtr, this, YieldTermStructureHandle.getCPtr(h), h), true);
+  }
+
+  public SwapIndex clone(YieldTermStructureHandle forwarding, YieldTermStructureHandle discounting) {
+    return new SwapIndex(QuantLibJNI.SwapIndex_clone__SWIG_1(swigCPtr, this, YieldTermStructureHandle.getCPtr(forwarding), forwarding, YieldTermStructureHandle.getCPtr(discounting), discounting), true);
+  }
+
+  public SwapIndex clone(Period tenor) {
+    return new SwapIndex(QuantLibJNI.SwapIndex_clone__SWIG_2(swigCPtr, this, Period.getCPtr(tenor), tenor), true);
+  }
+
 }

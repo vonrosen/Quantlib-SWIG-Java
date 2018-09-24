@@ -47,6 +47,26 @@ public class YearOnYearInflationSwap extends Instrument {
     return QuantLibJNI.YearOnYearInflationSwap_fairRate(swigCPtr, this);
   }
 
+  public double fixedLegNPV() {
+    return QuantLibJNI.YearOnYearInflationSwap_fixedLegNPV(swigCPtr, this);
+  }
+
+  public double yoyLegNPV() {
+    return QuantLibJNI.YearOnYearInflationSwap_yoyLegNPV(swigCPtr, this);
+  }
+
+  public double fairSpread() {
+    return QuantLibJNI.YearOnYearInflationSwap_fairSpread(swigCPtr, this);
+  }
+
+  public Leg fixedLeg() {
+    return new Leg(QuantLibJNI.YearOnYearInflationSwap_fixedLeg(swigCPtr, this), false);
+  }
+
+  public Leg yoyLeg() {
+    return new Leg(QuantLibJNI.YearOnYearInflationSwap_yoyLeg(swigCPtr, this), false);
+  }
+
   public final static _YearOnYearInflationSwap.Type Receiver = _YearOnYearInflationSwap.Type.swigToEnum(QuantLibJNI.YearOnYearInflationSwap_Receiver_get());
   public final static _YearOnYearInflationSwap.Type Payer = _YearOnYearInflationSwap.Type.swigToEnum(QuantLibJNI.YearOnYearInflationSwap_Payer_get());
 }

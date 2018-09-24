@@ -8,7 +8,7 @@
 
 package com.github.vonrosen.quantlib;
 
-public class CapHelper extends CalibrationHelper {
+public class CapHelper extends BlackCalibrationHelper {
   private transient long swigCPtr;
 
   protected CapHelper(long cPtr, boolean cMemoryOwn) {
@@ -35,7 +35,7 @@ public class CapHelper extends CalibrationHelper {
     super.delete();
   }
 
-  public CapHelper(Period length, QuoteHandle volatility, IborIndex index, Frequency fixedLegFrequency, DayCounter fixedLegDayCounter, boolean includeFirstSwaplet, YieldTermStructureHandle termStructure, _CalibrationHelper.CalibrationErrorType errorType) {
+  public CapHelper(Period length, QuoteHandle volatility, IborIndex index, Frequency fixedLegFrequency, DayCounter fixedLegDayCounter, boolean includeFirstSwaplet, YieldTermStructureHandle termStructure, _BlackCalibrationHelper.CalibrationErrorType errorType) {
     this(QuantLibJNI.new_CapHelper__SWIG_0(Period.getCPtr(length), length, QuoteHandle.getCPtr(volatility), volatility, IborIndex.getCPtr(index), index, fixedLegFrequency.swigValue(), DayCounter.getCPtr(fixedLegDayCounter), fixedLegDayCounter, includeFirstSwaplet, YieldTermStructureHandle.getCPtr(termStructure), termStructure, errorType.swigValue()), true);
   }
 

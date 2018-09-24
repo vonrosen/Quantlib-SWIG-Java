@@ -35,12 +35,16 @@ public class ExponentialSplinesFitting extends FittingMethod {
     super.delete();
   }
 
+  public ExponentialSplinesFitting(boolean constrainAtZero, Array weights) {
+    this(QuantLibJNI.new_ExponentialSplinesFitting__SWIG_0(constrainAtZero, Array.getCPtr(weights), weights), true);
+  }
+
   public ExponentialSplinesFitting(boolean constrainAtZero) {
-    this(QuantLibJNI.new_ExponentialSplinesFitting__SWIG_0(constrainAtZero), true);
+    this(QuantLibJNI.new_ExponentialSplinesFitting__SWIG_1(constrainAtZero), true);
   }
 
   public ExponentialSplinesFitting() {
-    this(QuantLibJNI.new_ExponentialSplinesFitting__SWIG_1(), true);
+    this(QuantLibJNI.new_ExponentialSplinesFitting__SWIG_2(), true);
   }
 
 }

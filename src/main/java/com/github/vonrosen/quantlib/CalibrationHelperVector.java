@@ -63,16 +63,16 @@ public class CalibrationHelperVector {
     QuantLibJNI.CalibrationHelperVector_clear(swigCPtr, this);
   }
 
-  public void add(CalibrationHelper x) {
-    QuantLibJNI.CalibrationHelperVector_add(swigCPtr, this, CalibrationHelper.getCPtr(x), x);
+  public void add(CalibrationHelperBase x) {
+    QuantLibJNI.CalibrationHelperVector_add(swigCPtr, this, CalibrationHelperBase.getCPtr(x), x);
   }
 
-  public CalibrationHelper get(int i) {
-    return new CalibrationHelper(QuantLibJNI.CalibrationHelperVector_get(swigCPtr, this, i), false);
+  public CalibrationHelperBase get(int i) {
+    return new CalibrationHelperBase(QuantLibJNI.CalibrationHelperVector_get(swigCPtr, this, i), false);
   }
 
-  public void set(int i, CalibrationHelper val) {
-    QuantLibJNI.CalibrationHelperVector_set(swigCPtr, this, i, CalibrationHelper.getCPtr(val), val);
+  public void set(int i, CalibrationHelperBase val) {
+    QuantLibJNI.CalibrationHelperVector_set(swigCPtr, this, i, CalibrationHelperBase.getCPtr(val), val);
   }
 
 }

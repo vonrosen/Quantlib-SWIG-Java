@@ -63,4 +63,8 @@ public class Vasicek extends ShortRateModel {
     return QuantLibJNI.Vasicek_discount(swigCPtr, this, t);
   }
 
+  public double discountBond(double now, double maturity, double rate) {
+    return QuantLibJNI.Vasicek_discountBond(swigCPtr, this, now, maturity, rate);
+  }
+
 }

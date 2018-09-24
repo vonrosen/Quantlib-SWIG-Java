@@ -43,6 +43,22 @@ public class CashFlows {
     return new Date(QuantLibJNI.CashFlows_maturityDate(Leg.getCPtr(arg0), arg0), true);
   }
 
+  public static Date previousCashFlowDate(Leg leg, boolean includeSettlementDateFlows, Date settlementDate) {
+    return new Date(QuantLibJNI.CashFlows_previousCashFlowDate__SWIG_0(Leg.getCPtr(leg), leg, includeSettlementDateFlows, Date.getCPtr(settlementDate), settlementDate), true);
+  }
+
+  public static Date previousCashFlowDate(Leg leg, boolean includeSettlementDateFlows) {
+    return new Date(QuantLibJNI.CashFlows_previousCashFlowDate__SWIG_1(Leg.getCPtr(leg), leg, includeSettlementDateFlows), true);
+  }
+
+  public static Date nextCashFlowDate(Leg leg, boolean includeSettlementDateFlows, Date settlementDate) {
+    return new Date(QuantLibJNI.CashFlows_nextCashFlowDate__SWIG_0(Leg.getCPtr(leg), leg, includeSettlementDateFlows, Date.getCPtr(settlementDate), settlementDate), true);
+  }
+
+  public static Date nextCashFlowDate(Leg leg, boolean includeSettlementDateFlows) {
+    return new Date(QuantLibJNI.CashFlows_nextCashFlowDate__SWIG_1(Leg.getCPtr(leg), leg, includeSettlementDateFlows), true);
+  }
+
   public static double npv(Leg leg, YieldTermStructure discountCurve, double zSpread, DayCounter dayCounter, Compounding compounding, Frequency frequency, boolean includeSettlementDateFlows, Date settlementDate, Date npvDate) {
     return QuantLibJNI.CashFlows_npv__SWIG_0(Leg.getCPtr(leg), leg, YieldTermStructure.getCPtr(discountCurve), discountCurve, zSpread, DayCounter.getCPtr(dayCounter), dayCounter, compounding.swigValue(), frequency.swigValue(), includeSettlementDateFlows, Date.getCPtr(settlementDate), settlementDate, Date.getCPtr(npvDate), npvDate);
   }

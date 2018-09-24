@@ -35,16 +35,16 @@ public class LogCubicZeroCurve extends YieldTermStructure {
     super.delete();
   }
 
-  public LogCubicZeroCurve(DateVector dates, DoubleVector yields, DayCounter dayCounter, Calendar calendar, LogCubic i, Compounding compounding, Frequency frequency) {
-    this(QuantLibJNI.new_LogCubicZeroCurve__SWIG_0(DateVector.getCPtr(dates), dates, DoubleVector.getCPtr(yields), yields, DayCounter.getCPtr(dayCounter), dayCounter, Calendar.getCPtr(calendar), calendar, LogCubic.getCPtr(i), i, compounding.swigValue(), frequency.swigValue()), true);
+  public LogCubicZeroCurve(DateVector dates, DoubleVector yields, DayCounter dayCounter, Calendar calendar, DefaultLogCubic i, Compounding compounding, Frequency frequency) {
+    this(QuantLibJNI.new_LogCubicZeroCurve__SWIG_0(DateVector.getCPtr(dates), dates, DoubleVector.getCPtr(yields), yields, DayCounter.getCPtr(dayCounter), dayCounter, Calendar.getCPtr(calendar), calendar, DefaultLogCubic.getCPtr(i), i, compounding.swigValue(), frequency.swigValue()), true);
   }
 
-  public LogCubicZeroCurve(DateVector dates, DoubleVector yields, DayCounter dayCounter, Calendar calendar, LogCubic i, Compounding compounding) {
-    this(QuantLibJNI.new_LogCubicZeroCurve__SWIG_1(DateVector.getCPtr(dates), dates, DoubleVector.getCPtr(yields), yields, DayCounter.getCPtr(dayCounter), dayCounter, Calendar.getCPtr(calendar), calendar, LogCubic.getCPtr(i), i, compounding.swigValue()), true);
+  public LogCubicZeroCurve(DateVector dates, DoubleVector yields, DayCounter dayCounter, Calendar calendar, DefaultLogCubic i, Compounding compounding) {
+    this(QuantLibJNI.new_LogCubicZeroCurve__SWIG_1(DateVector.getCPtr(dates), dates, DoubleVector.getCPtr(yields), yields, DayCounter.getCPtr(dayCounter), dayCounter, Calendar.getCPtr(calendar), calendar, DefaultLogCubic.getCPtr(i), i, compounding.swigValue()), true);
   }
 
-  public LogCubicZeroCurve(DateVector dates, DoubleVector yields, DayCounter dayCounter, Calendar calendar, LogCubic i) {
-    this(QuantLibJNI.new_LogCubicZeroCurve__SWIG_2(DateVector.getCPtr(dates), dates, DoubleVector.getCPtr(yields), yields, DayCounter.getCPtr(dayCounter), dayCounter, Calendar.getCPtr(calendar), calendar, LogCubic.getCPtr(i), i), true);
+  public LogCubicZeroCurve(DateVector dates, DoubleVector yields, DayCounter dayCounter, Calendar calendar, DefaultLogCubic i) {
+    this(QuantLibJNI.new_LogCubicZeroCurve__SWIG_2(DateVector.getCPtr(dates), dates, DoubleVector.getCPtr(yields), yields, DayCounter.getCPtr(dayCounter), dayCounter, Calendar.getCPtr(calendar), calendar, DefaultLogCubic.getCPtr(i), i), true);
   }
 
   public LogCubicZeroCurve(DateVector dates, DoubleVector yields, DayCounter dayCounter, Calendar calendar) {
